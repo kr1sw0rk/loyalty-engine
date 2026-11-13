@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Taxonomy — Loyalty Program Intelligence</title>
+    <meta name="description" content="Complete schema, taxonomy, and data dictionary for the Loyalty Program Intelligence database.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <style>
+        .taxonomy-section { margin-bottom: 2.5rem; }
+        .taxonomy-section h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .taxonomy-section h3 {
+            font-size: 1rem;
+            color: var(--text);
+            margin: 1.25rem 0 0.5rem;
+        }
+        .schema-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        .schema-table th, .schema-table td {
+            text-align: left;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .schema-table th {
+            background: var(--surface);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        .schema-table code {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-size: 0.8125rem;
+        }
+        .schema-table .type {
+            color: var(--yellow);
+            font-size: 0.8125rem;
+        }
+        .taxonomy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .taxonomy-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+        }
+        .taxonomy-card h4 {
+            font-size: 0.9375rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        .taxonomy-card ul {
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        .taxonomy-card li {
+            padding: 0.125rem 0;
+        }
+        .taxonomy-card li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .count-badge {
+            background: var(--surface);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+        .table-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .table-meta .count {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        .section-intro {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            margin-bottom: 1.5rem;
+            max-width: 72ch;
+        }
+        .field-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .field-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8125rem;
+        }
+        .field-item code {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .field-item .desc {
+            color: var(--text-muted);
+            display: block;
+            margin-top: 0.125rem;
+        }
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .toc h2 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            border: none;
+            padding: 0;
+        }
+        .toc ul {
+            list-style: none;
+            columns: 2;
+        }
+        .toc li {
+            padding: 0.25rem 0;
+        }
+        .toc a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        .toc a:hover { text-decoration: underline; }
+        .note {
+            background: rgba(234, 179, 8, 0.1);
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+        .note strong { color: var(--yellow); }
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Database Taxonomy</h1>
+            <p class="subtitle">Schema, data dictionary &amp; classification systems for Loyalty Program Intelligence</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="/" class="back-link">← Back to Dashboard</a>
+
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#tables">Database Tables (5)</a></li>
+                <li><a href="#sectors">Sector Classification (9)</a></li>
+                <li><a href="#regions">Regional Classification (6)</a></li>
+                <li><a href="#parameters">Parameter Taxonomy (77)</a></li>
+                <li><a href="#normalized">Normalized Record Fields (10)</a></li>
+                <li><a href="#api">API Authentication</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==================== TABLES ==================== -->
+        <section class="taxonomy-section" id="tables">
+            <h2>Database Tables</h2>
+            <p class="section-intro">Five tables in Cloudflare D1 (SQLite). The database serves the public API at <code>loyalty.digid.cc/api/*</code>.</p>
+
+            <!-- providers -->
+            <div class="table-meta">
+                <h3>providers</h3>
+                <span class="badge count-badge">168 rows</span>
+            </div>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td class="type">INTEGER</td><td>PK AUTOINCREMENT</td><td>Unique identifier</td></tr>
+                    <tr><td><code>company_name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Company operating the program</td></tr>
+                    <tr><td><code>program_name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Loyalty program name</td></tr>
+                    <tr><td><code>program_url</code></td><td class="type">TEXT</td><td></td><td>Program homepage URL</td></tr>
+                    <tr><td><code>sector</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Sector classification (see below)</td></tr>
+                    <tr><td><code>region</code></td><td class="type">TEXT</td><td></td><td>Geographic region (see below)</td></tr>
+                    <tr><td><code>estimated_members</code></td><td class="type">INTEGER</td><td></td><td>Estimated enrolled members</td></tr>
+                    <tr><td><code>key_characteristics</code></td><td class="type">TEXT</td><td></td><td>Free-text program description</td></tr>
+                    <tr><td><code>created_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Record creation timestamp</td></tr>
+                    <tr><td><code>updated_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Last update timestamp</td></tr>
+                </tbody>
+            </table>
+
+            <!-- parameters -->
+            <div class="table-meta" style="margin-top:2rem;">
+                <h3>parameters</h3>
+                <span class="badge count-badge">77 rows</span>
+            </div>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td class="type">INTEGER</td><td>PK AUTOINCREMENT</td><td>Unique identifier</td></tr>
+                    <tr><td><code>param_id</code></td><td class="type">TEXT</td><td>NOT NULL UNIQUE</td><td>Machine-readable parameter key</td></tr>
+                    <tr><td><code>name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Human-readable parameter name</td></tr>
+                    <tr><td><code>category</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Parameter category (see below)</td></tr>
+                    <tr><td><code>description</code></td><td class="type">TEXT</td><td></td><td>What this parameter measures</td></tr>
+                    <tr><td><code>data_type</code></td><td class="type">TEXT</td><td></td><td>Expected data type (text, number, boolean, etc.)</td></tr>
+                    <tr><td><code>benchmark_notes</code></td><td class="type">TEXT</td><td></td><td>Industry benchmark context</td></tr>
+                    <tr><td><code>created_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Record creation timestamp</td></tr>
+                </tbody>
+            </table>
+
+            <!-- crawled_data -->
+            <div class="table-meta" style="margin-top:2rem;">
+                <h3>crawled_data</h3>
+                <span class="badge count-badge">20 rows</span>
+            </div>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td class="type">INTEGER</td><td>PK AUTOINCREMENT</td><td>Unique identifier</td></tr>
+                    <tr><td><code>provider_id</code></td><td class="type">INTEGER</td><td>FK → providers.id</td><td>Link to parent provider</td></tr>
+                    <tr><td><code>company_name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Company name (denormalized)</td></tr>
+                    <tr><td><code>program_name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Program name (denormalized)</td></tr>
+                    <tr><td><code>sector</code></td><td class="type">TEXT</td><td></td><td>Sector (denormalized)</td></tr>
+                    <tr><td><code>region</code></td><td class="type">TEXT</td><td></td><td>Region (denormalized)</td></tr>
+                    <tr><td><code>program_url</code></td><td class="type">TEXT</td><td></td><td>Crawled URL</td></tr>
+                    <tr><td><code>estimated_members</code></td><td class="type">INTEGER</td><td></td><td>Member count (denormalized)</td></tr>
+                    <tr><td><code>crawl_status</code></td><td class="type">INTEGER</td><td></td><td>HTTP status code (200, 401, 500, etc.)</td></tr>
+                    <tr><td><code>crawl_error</code></td><td class="type">TEXT</td><td></td><td>Error message if crawl failed</td></tr>
+                    <tr><td><code>html_length</code></td><td class="type">INTEGER</td><td></td><td>Raw HTML byte count</td></tr>
+                    <tr><td><code>text_preview</code></td><td class="type">TEXT</td><td></td><td>Extracted plain text (first ~2000 chars)</td></tr>
+                    <tr><td><code>crawled_at</code></td><td class="type">TEXT</td><td></td><td>Crawl timestamp</td></tr>
+                    <tr><td><code>created_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Record creation timestamp</td></tr>
+                </tbody>
+            </table>
+
+            <!-- normalized_records_full -->
+            <div class="table-meta" style="margin-top:2rem;">
+                <h3>normalized_records_full</h3>
+                <span class="badge count-badge">81 rows</span>
+            </div>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td class="type">INTEGER</td><td>PK AUTOINCREMENT</td><td>Unique identifier</td></tr>
+                    <tr><td><code>company_name</code></td><td class="type">TEXT</td><td>NOT NULL</td><td>Company name</td></tr>
+                    <tr><td><code>program_name</code></td><td class="type">TEXT</td><td></td><td>Program name</td></tr>
+                    <tr><td><code>sector</code></td><td class="type">TEXT</td><td></td><td>Sector classification</td></tr>
+                    <tr><td><code>region</code></td><td class="type">TEXT</td><td></td><td>Geographic region</td></tr>
+                    <tr><td><code>estimated_members</code></td><td class="type">INTEGER</td><td></td><td>Estimated enrolled members</td></tr>
+                    <tr><td><code>tier_count</code></td><td class="type">INTEGER</td><td></td><td>Number of status tiers</td></tr>
+                    <tr><td><code>tier_names</code></td><td class="type">TEXT</td><td></td><td>JSON array of tier names</td></tr>
+                    <tr><td><code>miles_expiry</code></td><td class="type">TEXT</td><td></td><td>Points/miles expiry policy</td></tr>
+                    <tr><td><code>award_pricing</code></td><td class="type">TEXT</td><td></td><td>Award chart model (fixed, dynamic, zone-based)</td></tr>
+                    <tr><td><code>earn_rate</code></td><td class="type">TEXT</td><td></td><td>Base earning structure</td></tr>
+                    <tr><td><code>credit_card_partners</code></td><td class="type">TEXT</td><td></td><td>Co-branded credit card issuers</td></tr>
+                    <tr><td><code>alliance</code></td><td class="type">TEXT</td><td></td><td>Airline alliance (Star Alliance, oneworld, SkyTeam)</td></tr>
+                    <tr><code>points_currency</code></td><td class="type">TEXT</td><td></td><td>Points/miles currency name</td></tr>
+                    <tr><td><code>best_redemption</code></td><td class="type">TEXT</td><td></td><td>Highest-value redemption option</td></tr>
+                    <tr><td><code>analyzed_at</code></td><td class="type">TEXT</td><td></td><td>LLM analysis timestamp</td></tr>
+                    <tr><td><code>created_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Record creation timestamp</td></tr>
+                </tbody>
+            </table>
+
+            <!-- api_keys -->
+            <div class="table-meta" style="margin-top:2rem;">
+                <h3>api_keys</h3>
+                <span class="badge count-badge">1 row</span>
+            </div>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td class="type">INTEGER</td><td>PK AUTOINCREMENT</td><td>Unique identifier</td></tr>
+                    <tr><td><code>api_key</code></td><td class="type">TEXT</td><td>NOT NULL UNIQUE</td><td>API key value (64-char hex)</td></tr>
+                    <tr><td><code>name</code></td><td class="type">TEXT</td><td></td><td>Human-readable label</td></tr>
+                    <tr><td><code>created_at</code></td><td class="type">TEXT</td><td>datetime('now')</td><td>Key creation timestamp</td></tr>
+                    <tr><td><code>expires_at</code></td><td class="type">TEXT</td><td></td><td>Optional expiration date</td></tr>
+                    <tr><td><code>is_active</code></td><td class="type">INTEGER</td><td>DEFAULT 1</td><td>1=active, 0=revoked</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ==================== SECTORS ==================== -->
+        <section class="taxonomy-section" id="sectors">
+            <h2>Sector Classification</h2>
+            <p class="section-intro">Nine sectors classify each loyalty program by its primary industry vertical. Used for filtering, comparison, and benchmarking.</p>
+
+            <div class="taxonomy-grid">
+                <div class="taxonomy-card">
+                    <h4>airline <span class="badge">40</span></h4>
+                    <ul>
+                        <li>Major carriers (Delta, United, Lufthansa, Emirates, Singapore Airlines, etc.)</li>
+                        <li>Alliance programs (Star Alliance, oneworld, SkyTeam)</li>
+                        <li>Low-cost carrier programs (Ryanair, easyJet, Southwest)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>retail <span class="badge">39</span></h4>
+                    <ul>
+                        <li>Department stores (Nordstrom, Macy's, Harrods)</li>
+                        <li>Supermarkets (Tesco Clubcard, Kroger, Woolworths)</li>
+                        <li>E-commerce (Amazon Prime, Rakuten, Flipkart)</li>
+                        <li>Fashion & lifestyle (Sephora, H&amp;M, Zara)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>dining <span class="badge">16</span></h4>
+                    <ul>
+                        <li>Restaurant chains (Starbucks, McDonald's, Tim Hortons)</li>
+                        <li>Coffee shops (Costa, Pret A Manger, Luckin)</li>
+                        <li>Food delivery (DoorDash DashPass, Uber One, Rappi)</li>
+                        <li>Fast casual (Chipotle, Panera, Jollibee)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>credit_card <span class="badge">15</span></h4>
+                    <ul>
+                        <li>Bank loyalty programs (Amex MR, Chase UR, Citi TYP)</li>
+                        <li>Co-branded cards (Delta Amex, United Chase, Marriott Bonvoy)</li>
+                        <li>Store cards (Target RedCard, Nordstrom Visa)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>entertainment <span class="badge">15</span></h4>
+                    <ul>
+                        <li>Streaming (Netflix, Disney+, Spotify)</li>
+                        <li>Gaming (PlayStation Stars, Xbox Rewards, Nintendo)</li>
+                        <li>Theme parks (Disney Parks, Universal, Six Flags)</li>
+                        <li>Sports (FIFA, Aston Martin F1, Audience Rewards)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>hotel <span class="badge">14</span></h4>
+                    <ul>
+                        <li>Global chains (Marriott Bonvoy, Hilton Honors, IHG One)</li>
+                        <li>Luxury groups (Hyatt, Four Seasons, Ritz-Carlton)</li>
+                        <li>Boutique & regional (Accor Live Limitless, Small Luxury Hotels)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>fuel <span class="badge">12</span></h4>
+                    <ul>
+                        <li>Oil majors (Shell, BP, ExxonMobil, Chevron)</li>
+                        <li>Convenience stores (Circle K, Casey's, 7-Eleven)</li>
+                        <li>Regional operators (Petro-Canada, Esso, ADNOC)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>other <span class="badge">9</span></h4>
+                    <ul>
+                        <li>Telecom (T-Mobile Tuesdays, Safaricom Bonga)</li>
+                        <li>Super-apps (Grab, Gojek, Rappi)</li>
+                        <li>Financial services (Revolut, N26)</li>
+                        <li>Travel & mobility (Uber One, Lyft)</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>car_rental <span class="badge">8</span></h4>
+                    <ul>
+                        <li>Global brands (Hertz Gold, Avis Preferred, Enterprise Plus)</li>
+                        <li>Regional (Europcar, Sixt, Hertz Europe)</li>
+                        <li>Airline partnerships (National, Dollar/Thrifty)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== REGIONS ==================== -->
+        <section class="taxonomy-section" id="regions">
+            <h2>Regional Classification</h2>
+            <p class="section-intro">Six geographic regions classify where a program primarily operates. <code>global</code> means the program operates across multiple regions without a single primary market.</p>
+
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Region</th><th>Count</th><th>Definition</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>north_america</code></td>
+                        <td>67</td>
+                        <td>United States, Canada, Mexico — the largest single market for loyalty programs</td>
+                    </tr>
+                    <tr>
+                        <td><code>global</code></td>
+                        <td>30</td>
+                        <td>Multi-regional programs (Star Alliance, Marriott, Amazon Prime) with no single primary market</td>
+                    </tr>
+                    <tr>
+                        <td><code>asia_pacific</code></td>
+                        <td>22</td>
+                        <td>East Asia, Southeast Asia, South Asia, Australia/NZ, Japan</td>
+                    </tr>
+                    <tr>
+                        <td><code>europe</code></td>
+                        <td>22</td>
+                        <td>EU, UK, Switzerland, Scandinavia, Eastern Europe</td>
+                    </tr>
+                    <tr>
+                        <td><code>middle_efrica</code></td>
+                        <td>14</td>
+                        <td>Middle East + Africa combined (Emirates, Etihad, Safaricom, ADNOC)</td>
+                    </tr>
+                    <tr>
+                        <td><code>latin_america</code></td>
+                        <td>13</td>
+                        <td>Brazil, Mexico, Colombia, Chile, Argentina, Central America</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note">
+                <strong>Note:</strong> <code>middle_efrica</code> is a known typo — should be split into <code>middle_east</code> and <code>africa</code>, or renamed to <code>mena</code>. 14 records affected.
+            </div>
+        </section>
+
+        <!-- ==================== PARAMETERS ==================== -->
+        <section class="taxonomy-section" id="parameters">
+            <h2>Parameter Taxonomy</h2>
+            <p class="section-intro">77 comparison parameters across 10 categories. Each parameter defines one dimension for benchmarking loyalty programs.</p>
+
+            <div class="taxonomy-grid">
+                <div class="taxonomy-card">
+                    <h4>membership_tiers <span class="badge">12</span></h4>
+                    <ul>
+                        <li>Tier Count — number of status levels</li>
+                        <li>Tier Names — names of each tier</li>
+                        <li>Tier Structure Type — flat, gradient, hybrid</li>
+                        <li>Qualification Metric — spend, nights, points, segments</li>
+                        <li>Qualification Thresholds per Tier</li>
+                        <li>Qualification Window — calendar year, rolling</li>
+                        <li>Status Period Length — 12 months, lifetime</li>
+                        <li>Downgrade Policy — soft landing, hard reset</li>
+                        <li>Status Grace / Extension Period</li>
+                        <li>Tier Membership Distribution — % per tier</li>
+                        <li>Top-Tier Exclusivity — invite-only, earned</li>
+                        <li>Status Match Availability</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>program_economics <span class="badge">10</span></h4>
+                    <ul>
+                        <li>Revenue Model — how the program makes money</li>
+                        <li>Membership Fee Structure — free, paid tier, subscription</li>
+                        <li>Profitability Disclosure</li>
+                        <li>Deferred Revenue Flow</li>
+                        <li>Audit Risk Profile</li>
+                        <li>Partner Revenue Sharing</li>
+                        <li>KPI Measurement Set</li>
+                        <li>Program Maturity Level — emerging, established, mature</li>
+                        <li>Regulatory Constraints — GDPR, CCPA, etc.</li>
+                        <li>Paid Membership Layer — Amazon Prime, Uber One</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>earning_structure <span class="badge">9</span></h4>
+                    <ul>
+                        <li>Base Earn Rate — points per $1 spent</li>
+                        <li>Earn Currency — points, miles, tokens, stars</li>
+                        <li>Earn Metric Basis — spend, nights, segments, activity</li>
+                        <li>Bonus Multiplier Structure — tier bonuses, promo multipliers</li>
+                        <li>Partner Earning Network — earn at partners</li>
+                        <li>Promo Mechanics — limited-time offers, challenges</li>
+                        <li>Welcome / Enrollment Bonus</li>
+                        <li>Earn Caps and Exclusions</li>
+                        <li>Gamification Elements — streaks, challenges, badges</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>point_economics <span class="badge">9</span></h4>
+                    <ul>
+                        <li>Expiration Policy — never, 12-24 months, activity-based</li>
+                        <li>Devaluation History — past award chart changes</li>
+                        <li>Earn-to-Burn Ratio — earning vs redemption rates</li>
+                        <li>Breakage Rate — % of points never redeemed</li>
+                        <li>Breakage Recognition Method — revenue recognition</li>
+                        <li>Point Liability Balance — outstanding points value</li>
+                        <li>Liability Sensitivity to Breakage</li>
+                        <li>Points as Collateral / Financing</li>
+                        <li>Breakage Reversal Risk</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>program_identity <span class="badge">8</span></h4>
+                    <ul>
+                        <li>Program Name</li>
+                        <li>Operator Company</li>
+                        <li>Parent Company</li>
+                        <li>Sector</li>
+                        <li>Primary Region</li>
+                        <li>Launch Year</li>
+                        <li>Program Archetype — points, miles, cashback, tier-based</li>
+                        <li>Primary Objective — retention, acquisition, engagement</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>elite_perks <span class="badge">7</span></h4>
+                    <ul>
+                        <li>Lounge Access Benefit</li>
+                        <li>Upgrade Policy — complimentary, confirmed, waitlist</li>
+                        <li>Priority Boarding / Check-in / Security</li>
+                        <li>Late Checkout / Guaranteed Availability</li>
+                        <li>Dedicated Support — phone line, chat, concierge</li>
+                        <li>Experiential / Event Rewards</li>
+                        <li>Fee Waivers and Service Perks</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>redemption_options <span class="badge">7</span></h4>
+                    <ul>
+                        <li>Redemption Options — flights, hotels, cash, gift cards, merchandise</li>
+                        <li>Transfer Partners — airline/hotel/hotel transfer ratios</li>
+                        <li>Redemption Value per Point — cpp / cpm benchmarks</li>
+                        <li>Minimum Redemption Threshold</li>
+                        <li>Award Pricing Model — fixed, dynamic, zone-based, auction</li>
+                        <li>Blackout Dates and Award Availability</li>
+                        <li>Redemption Channels — online, app, phone, partner</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>program_scale <span class="badge">6</span></h4>
+                    <ul>
+                        <li>Enrolled Member Count</li>
+                        <li>Active Member Count — engaged in last 12 months</li>
+                        <li>Partner Network Size — # of earn/burn partners</li>
+                        <li>Geographic Coverage — countries/regions served</li>
+                        <li>Member Share of Volume — % of total revenue from members</li>
+                        <li>Alliance / Network Scale</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>digital_presence <span class="badge">5</span></h4>
+                    <ul>
+                        <li>Mobile App Availability — iOS, Android, both</li>
+                        <li>Website / Member Portal</li>
+                        <li>API / Open Platform — partner integrations</li>
+                        <li>Digital Wallet Integration — Apple/Google Wallet passes</li>
+                        <li>Personalization and Data Capability</li>
+                    </ul>
+                </div>
+                <div class="taxonomy-card">
+                    <h4>co_branded_partnerships <span class="badge">4</span></h4>
+                    <ul>
+                        <li>Co-branded Credit Cards — bank + airline/hotel cards</li>
+                        <li>Alliance / Coalition Membership — Star Alliance, oneworld</li>
+                        <li>Cross-Industry Partnerships — earn at non-sector partners</li>
+                        <li>Transfer-In Partners — convert external points into program</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NORMALIZED FIELDS ==================== -->
+        <section class="taxonomy-section" id="normalized">
+            <h2>Normalized Record Fields</h2>
+            <p class="section-intro">LLM-extracted structured data from crawled HTML. Currently 81 records analyzed (30 enriched with at least one extracted field).</p>
+
+            <div class="field-list">
+                <div class="field-item">
+                    <code>tier_count</code>
+                    <span class="desc">Number of status tiers (integer)</span>
+                </div>
+                <div class="field-item">
+                    <code>tier_names</code>
+                    <span class="desc">JSON array of tier names, e.g. ["Blue","Silver","Gold","Platinum"]</span>
+                </div>
+                <div class="field-item">
+                    <code>miles_expiry</code>
+                    <span class="desc">Points/miles expiration policy (e.g. "18 months inactivity")</span>
+                </div>
+                <div class="field-item">
+                    <code>award_pricing</code>
+                    <span class="desc">Award chart model: fixed, dynamic, zone-based, distance-based</span>
+                </div>
+                <div class="field-item">
+                    <code>earn_rate</code>
+                    <span class="desc">Base earning structure (e.g. "1 mile per mile flown")</span>
+                </div>
+                <div class="field-item">
+                    <code>credit_card_partners</code>
+                    <span class="desc">Co-branded credit card issuers (e.g. "Chase, American Express")</span>
+                </div>
+                <div class="field-item">
+                    <code>alliance</code>
+                    <span class="desc">Airline alliance membership: Star Alliance, oneworld, SkyTeam</span>
+                </div>
+                <div class="field-item">
+                    <code>points_currency</code>
+                    <span class="desc">Currency name (e.g. "SkyMiles", "Bonvoy Points", "Ultimate Rewards")</span>
+                </div>
+                <div class="field-item">
+                    <code>best_redemption</code>
+                    <span class="desc">Highest-value redemption option identified</span>
+                </div>
+                <div class="field-item">
+                    <code>analyzed_at</code>
+                    <span class="desc">Timestamp of LLM extraction</span>
+                </div>
+            </div>
+
+            <h3>Enrichment Coverage</h3>
+            <table class="schema-table" style="max-width:480px;">
+                <thead>
+                    <tr><th>Field</th><th>Populated</th><th>% of 81</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>tier_names</td><td>21</td><td>26%</td></tr>
+                    <tr><td>credit_card_partners</td><td>14</td><td>17%</td></tr>
+                    <tr><td>alliance</td><td>3</td><td>4%</td></tr>
+                    <tr><td>miles_expiry</td><td>—</td><td>—</td></tr>
+                    <tr><td>award_pricing</td><td>—</td><td>—</td></tr>
+                    <tr><td>earn_rate</td><td>—</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ==================== API ==================== -->
+        <section class="taxonomy-section" id="api">
+            <h2>API Authentication</h2>
+            <p class="section-intro">Write endpoints require an API key. Read endpoints are public.</p>
+
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Endpoint</th><th>Method</th><th>Auth</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>/api/stats</code></td><td>GET</td><td>Public</td><td>Counts + sector breakdown</td></tr>
+                    <tr><td><code>/api/providers</code></td><td>GET</td><td>Public</td><td>List providers (filter: sector, region, search, limit)</td></tr>
+                    <tr><td><code>/api/parameters</code></td><td>GET</td><td>Public</td><td>List parameters (filter: category, search)</td></tr>
+                    <tr><td><code>/api/normalized</code></td><td>GET</td><td>Public</td><td>List normalized records (filter: sector, enriched, limit)</td></tr>
+                    <tr><td><code>/api/crawled</code></td><td>GET</td><td>Public</td><td>List crawled HTML records</td></tr>
+                    <tr><td><code>/api/providers</code></td><td>POST</td><td><strong>API Key</strong></td><td>Create single provider</td></tr>
+                    <tr><td><code>/api/normalized</code></td><td>POST</td><td><strong>API Key</strong></td><td>Create normalized record</td></tr>
+                    <tr><td><code>/api/providers/bulk</code></td><td>POST</td><td><strong>API Key</strong></td><td>Bulk insert providers</td></tr>
+                    <tr><td><code>/mcp/sse</code></td><td>GET</td><td><strong>API Key</strong></td><td>MCP SSE transport stream</td></tr>
+                    <tr><td><code>/mcp/message</code></td><td>POST</td><td><strong>API Key</strong></td><td>MCP JSON-RPC endpoint</td></tr>
+                </tbody>
+            </table>
+
+            <h3>API Key</h3>
+            <p class="section-intro">Pass via <code>X-API-Key</code> header, <code>Authorization: Bearer *** query param <code>?key=</code>.</p>
+            <p class="section-intro">Key stored in 1Password vault "digid pay" → "Loyalty Engine Ingestion API Key".</p>
+
+            <h3>MCP Tools</h3>
+            <table class="schema-table">
+                <thead>
+                    <tr><th>Tool</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>create_provider</code></td><td>Create a single loyalty program provider</td></tr>
+                    <tr><td><code>create_normalized</code></td><td>Create a normalized record with extracted fields</td></tr>
+                    <tr><td><code>bulk_providers</code></td><td>Create multiple providers at once</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--text-muted); font-size:0.8125rem;">
+            <p>Loyalty Program Intelligence — digid.cc · Database: Cloudflare D1 · Updated 2026-11-13</p>
+        </footer>
+    </main>
+</body>
+</html>
