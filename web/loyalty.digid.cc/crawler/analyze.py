@@ -11,7 +11,7 @@ import urllib.request
 from datetime import datetime
 
 # MiMo API for LLM analysis
-MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
+MIMO_API_URL = "https://token-plan-sgp.xiaomimimo.com/v1/chat/completions"
 MIMO_API_KEY = os.environ.get("MIMO_API_KEY", "")
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
@@ -24,8 +24,7 @@ def load_parameters():
 def analyze_with_llm(text_preview, parameters, company_name, program_name):
     """Use LLM to extract structured fields from crawled text."""
     
-    param_summary = "
-".join([
+    param_summary = "\n".join([
         f"- {p['id']} ({p['category']}): {p['description'][:80]}"
         for p in parameters[:20]  # Top 20 params for context
     ])
@@ -57,7 +56,7 @@ Return ONLY valid JSON, no explanation."""
         req = urllib.request.Request(
             MIMO_API_URL,
             data=json.dumps({
-                "model": "mimo-v2.6-pro",
+                "model": "mimo-v2.6-flash",
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.1,
                 "max_tokens": 500,
