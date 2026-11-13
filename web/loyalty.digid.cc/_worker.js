@@ -83,6 +83,25 @@ async function handleCrawled(env) {
     return json(results);
 }
 
+async function handleNormalized(env, url) {
+    const sector = url.searchParams.get("sector");
+    const enriched = url.searchParams.get("enriched");
+    const limit = parseInt(url.searchParams.get("limit") || "200");
+
+    let query = "SELECT * FROM normalized_records_full WHERE 1=1";
+    const params = [];
+
+    if (sector) { query += " AND sector = ?"; params.push(sector); }
+    if (enriched === "true") {
+        query += " AND (tier_names IS NOT NULL OR alliance IS NOT NULL OR credit_card_partners IS NOT NULL)";
+    }
+    query += " ORDER BY estimated_members DESC LIMIT ?";
+    params.push(limit);
+
+    const { results } = await env.loyalty_engine.prepare(query).bind(...params).all();
+    return json(results);
+}
+
 export default {
     async fetch(request, env) {
         const url = new URL(request.url);
@@ -98,6 +117,7 @@ export default {
             if (path === "/api/providers") return await handleProviders(env, url);
             if (path === "/api/parameters") return await handleParameters(env, url);
             if (path === "/api/crawled") return await handleCrawled(env);
+            if (path === "/api/normalized") return await handleNormalized(env, url);
         } catch (err) {
             return json({ error: err.message }, 500);
         }
