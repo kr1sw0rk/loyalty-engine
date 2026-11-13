@@ -1,0 +1,267 @@
+[
+  {
+    "id": "program_identity.name",
+    "category": "identity",
+    "type": "string",
+    "description": "Program name"
+  },
+  {
+    "id": "program_identity.operator",
+    "category": "identity",
+    "type": "string",
+    "description": "Operating company"
+  },
+  {
+    "id": "program_identity.parent_company",
+    "category": "identity",
+    "type": "string",
+    "description": "Parent/holding company"
+  },
+  {
+    "id": "program_identity.sector",
+    "category": "identity",
+    "type": "enum",
+    "enum_values": [
+      "airline",
+      "hotel",
+      "car_rental",
+      "credit_card",
+      "retail",
+      "dining",
+      "fuel",
+      "entertainment",
+      "other"
+    ],
+    "description": "Program sector"
+  },
+  {
+    "id": "program_identity.region",
+    "category": "identity",
+    "type": "enum",
+    "enum_values": [
+      "global",
+      "north_america",
+      "europe",
+      "asia_pacific",
+      "latin_america",
+      "middle_eafrica"
+    ],
+    "description": "Primary region"
+  },
+  {
+    "id": "program_identity.launch_year",
+    "category": "identity",
+    "type": "integer",
+    "description": "Program launch year"
+  },
+  {
+    "id": "membership.tier_names",
+    "category": "membership",
+    "type": "array",
+    "description": "Tier names from lowest to highest"
+  },
+  {
+    "id": "membership.tier_thresholds",
+    "category": "membership",
+    "type": "array",
+    "description": "Qualification thresholds per tier"
+  },
+  {
+    "id": "membership.tier_benefits",
+    "category": "membership",
+    "type": "object",
+    "description": "Benefits per tier level"
+  },
+  {
+    "id": "membership.status_matching",
+    "category": "membership",
+    "type": "boolean",
+    "description": "Status match from competitor programs"
+  },
+  {
+    "id": "membership.lifetime_status",
+    "category": "membership",
+    "type": "boolean",
+    "description": "Lifetime status qualification available"
+  },
+  {
+    "id": "earning.base_rate",
+    "category": "earning",
+    "type": "number",
+    "description": "Base earn rate per currency unit"
+  },
+  {
+    "id": "earning.bonus_multipliers",
+    "category": "earning",
+    "type": "array",
+    "description": "Available bonus multiplier categories"
+  },
+  {
+    "id": "earning.partner_earning",
+    "category": "earning",
+    "type": "boolean",
+    "description": "Partner earning opportunities available"
+  },
+  {
+    "id": "earning.promo_mechanics",
+    "category": "earning",
+    "type": "string",
+    "description": "Common promotional earning mechanics"
+  },
+  {
+    "id": "redemption.flight_redemption",
+    "category": "redemption",
+    "type": "boolean",
+    "description": "Flight redemption available"
+  },
+  {
+    "id": "redemption.hotel_redemption",
+    "category": "redemption",
+    "type": "boolean",
+    "description": "Hotel redemption available"
+  },
+  {
+    "id": "redemption.retail_redemption",
+    "category": "redemption",
+    "type": "boolean",
+    "description": "Retail redemption available"
+  },
+  {
+    "id": "redemption.cashback",
+    "category": "redemption",
+    "type": "boolean",
+    "description": "Cashback redemption available"
+  },
+  {
+    "id": "redemption.transfer_partners",
+    "category": "redemption",
+    "type": "array",
+    "description": "Transfer partner programs"
+  },
+  {
+    "id": "redemption.avg_value_per_point",
+    "category": "redemption",
+    "type": "number",
+    "description": "Average redemption value per point (USD)"
+  },
+  {
+    "id": "point_economics.expiration_policy",
+    "category": "economics",
+    "type": "string",
+    "description": "Points expiration policy"
+  },
+  {
+    "id": "point_economics.devaluation_count_5y",
+    "category": "economics",
+    "type": "integer",
+    "description": "Number of devaluations in last 5 years"
+  },
+  {
+    "id": "point_economics.earn_to_burn_ratio",
+    "category": "economics",
+    "type": "number",
+    "description": "Industry average earn-to-burn ratio"
+  },
+  {
+    "id": "point_economics.breakage_rate",
+    "category": "economics",
+    "type": "number",
+    "description": "Estimated breakage rate (percentage of points never redeemed)"
+  },
+  {
+    "id": "scale.member_count",
+    "category": "scale",
+    "type": "integer",
+    "description": "Total program members"
+  },
+  {
+    "id": "scale.partner_count",
+    "category": "scale",
+    "type": "integer",
+    "description": "Number of partner locations/brands"
+  },
+  {
+    "id": "scale.geographic_coverage",
+    "category": "scale",
+    "type": "string",
+    "description": "Geographic coverage description"
+  },
+  {
+    "id": "digital.has_app",
+    "category": "digital",
+    "type": "boolean",
+    "description": "Mobile app available"
+  },
+  {
+    "id": "digital.has_website",
+    "category": "digital",
+    "type": "boolean",
+    "description": "Website available"
+  },
+  {
+    "id": "digital.has_api",
+    "category": "digital",
+    "type": "boolean",
+    "description": "Public API available"
+  },
+  {
+    "id": "partnerships.cobranded_credit_card",
+    "category": "partnerships",
+    "type": "boolean",
+    "description": "Co-branded credit card available"
+  },
+  {
+    "id": "partnerships.airline_alliance",
+    "category": "partnerships",
+    "type": "string",
+    "description": "Airline alliance membership"
+  },
+  {
+    "id": "partnerships.hotel_brand_family",
+    "category": "partnerships",
+    "type": "string",
+    "description": "Hotel brand family membership"
+  },
+  {
+    "id": "elite_benefits.lounge_access",
+    "category": "elite",
+    "type": "boolean",
+    "description": "Lounge access available at top tier"
+  },
+  {
+    "id": "elite_benefits.upgrade_priority",
+    "category": "elite",
+    "type": "boolean",
+    "description": "Upgrade priority at top tier"
+  },
+  {
+    "id": "elite_benefits.priority_boarding",
+    "category": "elite",
+    "type": "boolean",
+    "description": "Priority boarding at top tier"
+  },
+  {
+    "id": "elite_benefits.late_checkout",
+    "category": "elite",
+    "type": "boolean",
+    "description": "Late checkout at top tier"
+  },
+  {
+    "id": "program_economics.revenue_model",
+    "category": "economics",
+    "type": "string",
+    "description": "Primary revenue model description"
+  },
+  {
+    "id": "program_economics.estimated_liability",
+    "category": "economics",
+    "type": "number",
+    "description": "Estimated points liability (USD)"
+  },
+  {
+    "id": "program_economics.profitability_driver",
+    "category": "economics",
+    "type": "string",
+    "description": "Main profitability driver"
+  }
+]
