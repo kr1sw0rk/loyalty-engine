@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Loyalty Program Intelligence</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .dashboard-header h1 {
+            font-size: 1.75rem;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .stat-card .label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+        }
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .btn-outline:hover {
+            background: var(--surface);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <span id="user-email"></span>
+                <div class="user-avatar" id="user-avatar"></div>
+                <button class="btn btn-outline" onclick="signOut()">Sign out</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Programs</div>
+                <div class="value" id="stat-programs">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Sectors</div>
+                <div class="value" id="stat-sectors">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Recommendations</div>
+                <div class="value" id="stat-recs">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Potential Savings</div>
+                <div class="value" id="stat-savings">$0</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Your Loyalty Programs</h2>
+            <div id="memberships-list">
+                <div class="empty-state">
+                    <div class="icon">🏆</div>
+                    <p>No programs added yet</p>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">Add your first loyalty program to get recommendations</p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+                        <a href="/dashboard/memberships/add" class="btn">Add Program</a>
+                        <a href="/dashboard/memberships/gmail" class="btn btn-outline">Connect Gmail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recommendations</h2>
+            <div id="recommendations-list">
+                <div class="empty-state">
+                    <div class="icon">💡</div>
+                    <p>No recommendations yet</p>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">Add programs and spend data to get personalized switch recommendations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Check auth
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            if (!session) {
+                window.location.href = '/auth/login';
+                return;
+            }
+
+            // Display user info
+            document.getElementById('user-email').textContent = session.user.email;
+            document.getElementById('user-avatar').textContent = session.user.email[0].toUpperCase();
+
+            // Load dashboard data
+            loadDashboard(session);
+        });
+
+        async function loadDashboard(session) {
+            const token = session.access_token;
+
+            // Load memberships
+            const membRes = await fetch('/api/user/memberships', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const memberships = await membRes.json();
+
+            if (memberships.length > 0) {
+                document.getElementById('stat-programs').textContent = memberships.length;
+                const sectors = new Set(memberships.map(m => m.sector));
+                document.getElementById('stat-sectors').textContent = sectors.size;
+
+                // Render memberships
+                const list = document.getElementById('memberships-list');
+                list.innerHTML = memberships.map(m => `
+                    <div style="display: flex; align-items: center; padding: 1rem; border-bottom: 1px solid var(--border);">
+                        <div style="flex: 1;">
+                            <strong>${m.program_name}</strong>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">${m.company_name} · ${m.sector}</div>
+                        </div>
+                        ${m.tier_name ? `<span style="background: var(--accent-light); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem;">${m.tier_name}</span>` : ''}
+                    </div>
+                `).join('');
+            }
+
+            // Load recommendations
+            const recRes = await fetch('/api/user/recommendations', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const recs = await recRes.json();
+
+            if (recs.length > 0) {
+                document.getElementById('stat-recs').textContent = recs.length;
+                const totalSavings = recs.reduce((sum, r) => sum + r.delta_value, 0);
+                document.getElementById('stat-savings').textContent = `$${Math.round(totalSavings)}`;
+
+                const list = document.getElementById('recommendations-list');
+                list.innerHTML = recs.slice(0, 5).map(r => `
+                    <div style="display: flex; align-items: center; padding: 1rem; border-bottom: 1px solid var(--border);">
+                        <div style="flex: 1;">
+                            <strong>Switch from ${r.from_program} to ${r.to_program}</strong>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">${r.sector} · ${Math.round(r.confidence * 100)}% confidence</div>
+                        </div>
+                        <span style="color: var(--green); font-weight: 600;">+$${Math.round(r.delta_value)}/yr</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        async function signOut() {
+            await supabase.auth.signOut();
+            document.cookie = 'sb-access-token=; path=/; max-age=0';
+            document.cookie = 'sb-refresh-token=; path=/; max-age=0';
+            window.location.href = '/auth/login';
+        }
+    </script>
+</body>
+</html>
