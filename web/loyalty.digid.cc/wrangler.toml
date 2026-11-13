@@ -6,3 +6,7 @@ compatibility_date = "2026-11-13"
 binding = "loyalty_engine"
 database_name = "loyalty-engine"
 database_id = "47b61c88-e0f5-4a82-ad1d-c80dbd727ef5"
+
+routes = [
+    { pattern = "api.loyalty.digid.cc/*", zone_name = "digid.cc" }
+]
