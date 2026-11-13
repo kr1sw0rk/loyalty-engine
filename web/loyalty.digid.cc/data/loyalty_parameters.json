@@ -1,0 +1,636 @@
+[
+  {
+    "id": "program_name",
+    "name": "Program Name",
+    "category": "program_identity",
+    "description": "Official consumer-facing name of the loyalty program.",
+    "data_type": "string",
+    "benchmark_notes": "Track renames (e.g., British Airways Executive Club → The British Airways Club, April 2025; Hilton HHonors → Hilton Honors, 2017; GrabRewards → GrabCoins)."
+  },
+  {
+    "id": "operator_company",
+    "name": "Operator Company",
+    "category": "program_identity",
+    "description": "Legal entity or brand operating the program day-to-day.",
+    "data_type": "string",
+    "benchmark_notes": "May differ from brand (e.g., PAYBACK GmbH operated under Loyalty Partner GmbH within American Express Group)."
+  },
+  {
+    "id": "parent_company",
+    "name": "Parent Company",
+    "category": "program_identity",
+    "description": "Ultimate parent/controlling company of the program operator.",
+    "data_type": "string",
+    "benchmark_notes": "Key for coalition and JV programs (e.g., Scene+ owned ~33.3% each by Scotiabank, Cineplex, Empire; flybuys 50/50 Coles–Wesfarmers)."
+  },
+  {
+    "id": "sector",
+    "name": "Sector",
+    "category": "program_identity",
+    "description": "Primary industry sector of the program.",
+    "data_type": "enum",
+    "allowed_values": ["airline", "hotel", "car_rental", "credit_card", "retail", "dining", "fuel", "entertainment", "other"],
+    "benchmark_notes": "Cross-sector programs (e.g., Amazon Prime, Walmart+) map to 'other' or their dominant monetization sector."
+  },
+  {
+    "id": "region",
+    "name": "Primary Region",
+    "category": "program_identity",
+    "description": "Geographic footprint of the program.",
+    "data_type": "enum",
+    "allowed_values": ["global", "north_america", "europe", "asia_pacific", "latin_america", "middle_efrica"],
+    "benchmark_notes": "Use 'global' only for genuinely multi-continent programs; otherwise pick the dominant operating region."
+  },
+  {
+    "id": "launch_year",
+    "name": "Launch Year",
+    "category": "program_identity",
+    "description": "Year the program launched (or year of current form after merger/rebrand).",
+    "data_type": "integer",
+    "benchmark_notes": "Reference points: AAdvantage 1981, Star Alliance 1997, Hilton HHonors 1987, Marriott Bonvoy merger 2019, Skywards 2001."
+  },
+  {
+    "id": "program_archetype",
+    "name": "Program Archetype",
+    "category": "program_identity",
+    "description": "Structural type of the loyalty program.",
+    "data_type": "enum",
+    "allowed_values": ["points_currency", "account_credits", "status_tiers", "gamification", "paid_membership", "coalition", "experiential", "hybrid"],
+    "benchmark_notes": "Umbrex playbook archetypes: points, tiers, paid memberships, coalition, experiential; Open Loyalty adds account credits and gamification as primary frameworks."
+  },
+  {
+    "id": "primary_objective",
+    "name": "Primary Objective",
+    "category": "program_identity",
+    "description": "The single primary behavioral objective the program funds at launch.",
+    "data_type": "enum",
+    "allowed_values": ["purchase_frequency", "basket_size", "retention", "data_identity", "advocacy", "engagement"],
+    "benchmark_notes": "Loyalty Juggernaut: one primary objective at launch, others sequenced behind it; four behavioral types — frequency, basket size, retention, data/identity."
+  },
+  {
+    "id": "tier_count",
+    "name": "Tier Count",
+    "category": "membership_tiers",
+    "description": "Number of status tiers including entry level (excluding base non-status members if distinct).",
+    "data_type": "integer",
+    "benchmark_notes": "Industry norm is 3–5 tiers (Talon.One); Marriott Bonvoy has 5 elite tiers above base; Hilton Honors has 4 status levels."
+  },
+  {
+    "id": "tier_names",
+    "name": "Tier Names",
+    "category": "membership_tiers",
+    "description": "Ordered list of tier names from lowest to highest.",
+    "data_type": "array_of_strings",
+    "benchmark_notes": "Examples: Hilton (Member/Silver/Gold/Diamond), Qantas (Bronze/Silver/Gold/Platinum/Platinum One), AMC Stubs (Insider/Premiere/Premiere Go/A-List)."
+  },
+  {
+    "id": "tier_structure_type",
+    "name": "Tier Structure Type",
+    "category": "membership_tiers",
+    "description": "Shape of the recognition layer: flat, tiered, or hybrid.",
+    "data_type": "enum",
+    "allowed_values": ["flat", "tiered", "hybrid"],
+    "benchmark_notes": "Loyalty Juggernaut recognition layer has three broad shapes; hybrid combines tiers with transactional perks (e.g., AMC Stubs free tier + paid A-List subscription)."
+  },
+  {
+    "id": "qualification_metric",
+    "name": "Qualification Metric",
+    "category": "membership_tiers",
+    "description": "Primary metric used to qualify for status.",
+    "data_type": "array_of_enum",
+    "allowed_values": ["nights", "segments", "flights", "miles_flown", "spend_currency", "status_credits", "points_earned", "transactions", "paid_fee"],
+    "benchmark_notes": "Shift to spend-based qualification is a notable trend (British Airways moved to spend-based tier points from April 2025: £7,500 Silver / £20,000 Gold annually)."
+  },
+  {
+    "id": "qualification_thresholds",
+    "name": "Qualification Thresholds per Tier",
+    "category": "membership_tiers",
+    "description": "Threshold value required for each tier in the qualification metric's unit.",
+    "data_type": "object",
+    "benchmark_notes": "Reference values: Marriott Silver 10 / Gold 25 / Platinum 50 / Titanium 75 / Ambassador 100 nights + $23,000 spend; Sephora VIB $350 / Rouge $1,000 annually; Qantas status credits 300/700/1400/3600."
+  },
+  {
+    "id": "qualification_window",
+    "name": "Qualification Window",
+    "category": "membership_tiers",
+    "description": "Period over which qualification metrics accumulate.",
+    "data_type": "enum",
+    "allowed_values": ["calendar_year", "rolling_12_months", "fiscal_year", "lifetime", "program_defined"],
+    "benchmark_notes": "ALDO uses rolling 12-month ($150/$300); many airlines use qualification year + 12-month status period."
+  },
+  {
+    "id": "status_period_length",
+    "name": "Status Period Length",
+    "category": "membership_tiers",
+    "description": "How long earned status lasts once qualified.",
+    "data_type": "string",
+    "benchmark_notes": "Common norm: 12-month status periods; benchmark against qualification window alignment."
+  },
+  {
+    "id": "downgrade_policy",
+    "name": "Downgrade Policy",
+    "category": "membership_tiers",
+    "description": "Rule governing status loss when requalification fails.",
+    "data_type": "string",
+    "benchmark_notes": "Design norm: maximum one-level downgrade (soft landing); e.g., Marriott Titanium with zero qualifying nights drops only to Platinum, not to base."
+  },
+  {
+    "id": "grace_period",
+    "name": "Status Grace / Extension Period",
+    "category": "membership_tiers",
+    "description": "Grace or extension mechanics offered on status (e.g., 90-day extensions, rollover nights).",
+    "data_type": "string",
+    "benchmark_notes": "Post-pandemic programs normalized status extensions and night rollovers; benchmark whether extensions are automatic or promotional."
+  },
+  {
+    "id": "tier_membership_distribution",
+    "name": "Tier Membership Distribution",
+    "category": "membership_tiers",
+    "description": "Share of active members in entry / mid / top tiers.",
+    "data_type": "object",
+    "benchmark_notes": "Design target: 60–70% entry, 20–30% mid, 5–10% top (Talon.One)."
+  },
+  {
+    "id": "top_tier_exclusivity",
+    "name": "Top-Tier Exclusivity",
+    "category": "membership_tiers",
+    "description": "Percentage of total members in upper and top tiers.",
+    "data_type": "object",
+    "benchmark_notes": "Norm: upper tiers (silver/gold/platinum) <10% of base; top tier ≈0.5% of members (Open Loyalty)."
+  },
+  {
+    "id": "status_match_availability",
+    "name": "Status Match Availability",
+    "category": "membership_tiers",
+    "description": "Whether the program offers status matches from competing programs, and under what terms.",
+    "data_type": "string",
+    "benchmark_notes": "Record match source list, documentation requirements, challenge vs instant match, and how long matched status lasts."
+  },
+  {
+    "id": "base_earn_rate",
+    "name": "Base Earn Rate",
+    "category": "earning_structure",
+    "description": "Primary earn rate for the core qualifying action (points/miles per currency unit, per mile, or per night).",
+    "data_type": "string",
+    "benchmark_notes": "Normalize to points per 1 local currency unit or % of spend for cross-program comparison."
+  },
+  {
+    "id": "earn_currency",
+    "name": "Earn Currency",
+    "category": "earning_structure",
+    "description": "Name and unit of the loyalty currency earned.",
+    "data_type": "string",
+    "benchmark_notes": "Miles (airlines), points (hotels/retail), coins (GrabCoins), status credits (Qantas, non-redeemable), ShowPoints (Audience Rewards)."
+  },
+  {
+    "id": "earn_metric_basis",
+    "name": "Earn Metric Basis",
+    "category": "earning_structure",
+    "description": "Whether earning is based on distance flown, cabin, spend, nights, or transactions.",
+    "data_type": "enum",
+    "allowed_values": ["distance", "cabin_class", "spend", "nights", "transactions", "engagement_actions", "mixed"],
+    "benchmark_notes": "BA's 2025 move from distance/cabin tier points to spend-based tier points is an industry reference point."
+  },
+  {
+    "id": "bonus_multiplier_structure",
+    "name": "Bonus Multiplier Structure",
+    "category": "earning_structure",
+    "description": "How elite, promo, or partner multipliers stack on base earn.",
+    "data_type": "string",
+    "benchmark_notes": "Record whether multipliers stack multiplicatively or additively, and caps."
+  },
+  {
+    "id": "partner_earning_network",
+    "name": "Partner Earning Network",
+    "category": "earning_structure",
+    "description": "Size and type of partners that can earn the currency (transfer-in, direct earn, portals).",
+    "data_type": "object",
+    "benchmark_notes": "Examples: Chase Shop and Earn 1–15 pts/$ at 1,000+ stores; Nectar 14 member companies and 400+ online retailers (2010)."
+  },
+  {
+    "id": "promo_mechanics",
+    "name": "Promo Mechanics",
+    "category": "earning_structure",
+    "description": "Standard promotional levers used (double-point days, challenges, streaks, gamification).",
+    "data_type": "array_of_enum",
+    "allowed_values": ["double_point_days", "spend_challenges", "streaks", "gamified_quests", "welcome_bonus", "targeted_offers", "seasonal_campaigns", "referral_bonuses"],
+    "benchmark_notes": "T-Mobile Tuesdays is a partner-perks promo model; Starbucks Stars redesign (March 2026, Gold at 500 Stars) shows earn-threshold promos."
+  },
+  {
+    "id": "welcome_bonus",
+    "name": "Welcome / Enrollment Bonus",
+    "category": "earning_structure",
+    "description": "Bonus given on enrollment or first qualifying action.",
+    "data_type": "string",
+    "benchmark_notes": "Card examples: Barclaycard Avios free card 5,000 Avios on £1,000 spend in 3 months; Avios Plus 25,000 on £3,000."
+  },
+  {
+    "id": "earn_caps",
+    "name": "Earn Caps and Exclusions",
+    "category": "earning_structure",
+    "description": "Limits on earning (per transaction, per period, excluded categories).",
+    "data_type": "string",
+    "benchmark_notes": "Qantas charges a A$99.50 join fee — enrollment cost is itself an earn-side parameter."
+  },
+  {
+    "id": "redemption_options",
+    "name": "Redemption Options",
+    "category": "redemption_options",
+    "description": "Catalog of redemption categories available.",
+    "data_type": "array_of_enum",
+    "allowed_values": ["flights", "hotel_stays", "car_rental", "retail_gift_cards", "cashback_statement_credit", "merchandise", "experiences_events", "charity_donations", "bill_payments", "partner_merchandise", "upgrade_awards", "subscription_fees"],
+    "benchmark_notes": "Chase UR: travel, cash back, 200+ gift-card brands, transfers; Lidl Punkte redeems against streaming subscriptions (Disney+, BILD+)."
+  },
+  {
+    "id": "transfer_partners",
+    "name": "Transfer Partners",
+    "category": "redemption_options",
+    "description": "External programs to which currency can be transferred, with ratios.",
+    "data_type": "array_of_object",
+    "benchmark_notes": "Amex MR transfers only to participating airline programs; Bilt transfers to ~19 airline programs and 7 hotel groups; record transfer ratio and transfer time."
+  },
+  {
+    "id": "redemption_value_per_point",
+    "name": "Redemption Value per Point",
+    "category": "redemption_options",
+    "description": "Effective cents-per-unit value (CPP/CPM) for typical redemptions.",
+    "data_type": "number",
+    "benchmark_notes": "Anchor: flybuys 2,000 points = A$10; PC Optimum 1,000 points = CA$1; AMC Stubs 5,000 points = $5 off."
+  },
+  {
+    "id": "min_redemption_threshold",
+    "name": "Minimum Redemption Threshold",
+    "category": "redemption_options",
+    "description": "Lowest balance required to redeem.",
+    "data_type": "integer",
+    "benchmark_notes": "PAYBACK redeems from 200 points; GrabCoins offsets from 50 coins."
+  },
+  {
+    "id": "award_pricing_model",
+    "name": "Award Pricing Model",
+    "category": "redemption_options",
+    "description": "How redemption prices are set.",
+    "data_type": "enum",
+    "allowed_values": ["fixed_chart", "dynamic_revenue_based", "peak_off_peak", "market_based", "hybrid"],
+    "benchmark_notes": "Dynamic pricing drives devaluation risk: award prices across 39 major airline/hotel programs rose ~37% 2015–2026 (~3.2%/yr), led by Delta SkyMiles +60% and Hilton Honors +55%."
+  },
+  {
+    "id": "blackout_and_availability",
+    "name": "Blackout Dates and Award Availability",
+    "category": "redemption_options",
+    "description": "Restrictions on redemption availability.",
+    "data_type": "string",
+    "benchmark_notes": "Record blackout dates, capacity controls, and whether partner awards are exempt."
+  },
+  {
+    "id": "redemption_channels",
+    "name": "Redemption Channels",
+    "category": "redemption_options",
+    "description": "Channels where redemption can occur.",
+    "data_type": "array_of_enum",
+    "allowed_values": ["app", "website", "in_store", "in_flight", "at_property", "call_center", "partner_api", "statement_offset"],
+    "benchmark_notes": "DBS points redeem via DBS PayLah! including NETS QR acceptance points — QR/offline redemption is a differentiator."
+  },
+  {
+    "id": "expiration_policy",
+    "name": "Expiration Policy",
+    "category": "point_economics",
+    "description": "Rules for currency expiry.",
+    "data_type": "string",
+    "benchmark_notes": "Reference trajectory: AAdvantage no expiration → 3 years (1989) → 18 months (2012) → 24 months (March 2022); Delta removed expiration 2011; United 2019; Cathay Asia Miles expire after 18 months of inactivity."
+  },
+  {
+    "id": "devaluation_history",
+    "name": "Devaluation History",
+    "category": "point_economics",
+    "description": "Record of earn-rate cuts, award-chart increases, or benefit reductions over time.",
+    "data_type": "array_of_object",
+    "benchmark_notes": "Track date, magnitude, and type; cross-check against benchmark index of ~3.2%/yr award inflation 2015–2026."
+  },
+  {
+    "id": "earn_to_burn_ratio",
+    "name": "Earn-to-Burn Ratio",
+    "category": "point_economics",
+    "description": "Points issued versus points redeemed over a period.",
+    "data_type": "number",
+    "benchmark_notes": "No widely published primary benchmark; proxy via issuer disclosures of deferral vs recognition (e.g., AAdvantage 2025: deferred $4.445B, recognized $3.935B)."
+  },
+  {
+    "id": "breakage_rate",
+    "name": "Breakage Rate",
+    "category": "point_economics",
+    "description": "Estimated percentage of issued currency that will never be redeemed.",
+    "data_type": "number",
+    "benchmark_notes": "Delta recognizes breakage proportionally as remaining miles are redeemed; Marriott discloses a 1pp lower breakage estimate raises loyalty liability ~$50M; KPMG calls breakage a critical deferred-liability input."
+  },
+  {
+    "id": "breakage_recognition_method",
+    "name": "Breakage Recognition Method",
+    "category": "point_economics",
+    "description": "Accounting method used to recognize breakage revenue.",
+    "data_type": "enum",
+    "allowed_values": ["proportional_redemption", "direct_estimation", "redemption_pattern_method", "not_disclosed"],
+    "benchmark_notes": "Delta: proportional recognition with statistical models; Cathay actuary: Probability(Redemption) + Probability(Breakage) = 1 under IFRS 15."
+  },
+  {
+    "id": "point_liability_balance",
+    "name": "Point Liability Balance",
+    "category": "point_economics",
+    "description": "Carried loyalty program deferred revenue / liability.",
+    "data_type": "number",
+    "benchmark_notes": "Reference balances (FY2024/2025): Delta $8.8B; Marriott $7.519B; American Airlines $10.564B (YE2025)."
+  },
+  {
+    "id": "liability_sensitivity",
+    "name": "Liability Sensitivity to Breakage",
+    "category": "point_economics",
+    "description": "Disclosed sensitivity of liability to a 1pp change in breakage estimate.",
+    "data_type": "string",
+    "benchmark_notes": "Marriott: −1pp breakage ≈ +$50M liability; 2024 estimate revisions reduced revenue and raised liability ~$72M."
+  },
+  {
+    "id": "points_as_collateral",
+    "name": "Points as Collateral / Financing",
+    "category": "point_economics",
+    "description": "Whether the program's value has been pledged or securitized.",
+    "data_type": "string",
+    "benchmark_notes": "Delta SkyMiles valued at $6.5B and pledged as collateral in 2020 after a 78% decline in miles redeemed in H1 2020."
+  },
+  {
+    "id": "enrolled_member_count",
+    "name": "Enrolled Member Count",
+    "category": "program_scale",
+    "description": "Total enrolled members.",
+    "data_type": "integer",
+    "benchmark_notes": "Known figures: Hilton Honors 270M+ (official fact sheet, Oct 2026); Accor ALL 100M (2025); Qantas FF 18.9M (June 2026); AAdvantage 115M (April 2021); Amazon Prime ~220M (mid-2025)."
+  },
+  {
+    "id": "active_member_count",
+    "name": "Active Member Count",
+    "category": "program_scale",
+    "description": "Members active within a defined period (12 months typical).",
+    "data_type": "integer",
+    "benchmark_notes": "Active/engaged ratio is a core health metric; Air Miles Netherlands reports 3.8M active."
+  },
+  {
+    "id": "partner_network_size",
+    "name": "Partner Network Size",
+    "category": "program_scale",
+    "description": "Count of earn/redemption partners (coalition members, transfer partners, co-brand merchants).",
+    "data_type": "integer",
+    "benchmark_notes": "PAYBACK: 30+ in-store partners across 22,000+ German stores and ~700 online shops; Rakuten Rewards US: 3,500+ stores."
+  },
+  {
+    "id": "geographic_coverage",
+    "name": "Geographic Coverage",
+    "category": "program_scale",
+    "description": "Countries/markets where the program operates.",
+    "data_type": "string",
+    "benchmark_notes": "Examples: Amazon Prime 28 countries; Tesco Clubcard UK/IE/CZ/SK/HU; Hertz ~160 countries."
+  },
+  {
+    "id": "member_volume_share",
+    "name": "Member Share of Volume",
+    "category": "program_scale",
+    "description": "Share of total business volume generated by members.",
+    "data_type": "string",
+    "benchmark_notes": "Marriott: loyalty members booked 72% of U.S. and 65% of global room nights in 2024."
+  },
+  {
+    "id": "alliance_scale",
+    "name": "Alliance / Network Scale",
+    "category": "program_scale",
+    "description": "Scale of alliance or multi-brand network the program plugs into.",
+    "data_type": "string",
+    "benchmark_notes": "Star Alliance: 26 members, ~1,300 airports, 195 countries, two-tier alliance rewards (Silver/Gold)."
+  },
+  {
+    "id": "mobile_app",
+    "name": "Mobile App Availability",
+    "category": "digital_presence",
+    "description": "Whether a dedicated app exists and its core functions.",
+    "data_type": "object",
+    "benchmark_notes": "Record earn, redeem, card wallet, mobile order, push offers, digital membership card."
+  },
+  {
+    "id": "website_portal",
+    "name": "Website / Member Portal",
+    "category": "digital_presence",
+    "description": "Self-service web portal for balance, redemption, and profile.",
+    "data_type": "boolean",
+    "benchmark_notes": "Baseline requirement; benchmark depth (statement, partner marketplace, challenges hub)."
+  },
+  {
+    "id": "api_openness",
+    "name": "API / Open Platform",
+    "category": "digital_presence",
+    "description": "Availability of public or partner APIs for earn/redemption integration.",
+    "data_type": "enum",
+    "allowed_values": ["public_api", "partner_api_only", "internal_only", "unknown"],
+    "benchmark_notes": "Open Loyalty benchmark includes data/integration as a readiness dimension; 28.6% name integration as top challenge."
+  },
+  {
+    "id": "digital_wallet_integration",
+    "name": "Digital Wallet Integration",
+    "category": "digital_presence",
+    "description": "Support for Apple/Google wallets, in-app barcode, QR redemption.",
+    "data_type": "boolean",
+    "benchmark_notes": "Table stakes in retail/dining; differentiator in emerging markets via QR (e.g., DBS/NETS QR)."
+  },
+  {
+    "id": "personalization_capability",
+    "name": "Personalization and Data Capability",
+    "category": "digital_presence",
+    "description": "Ability to segment and personalize offers from first-party data.",
+    "data_type": "enum",
+    "allowed_values": ["basic", "segmented", "individualized", "ai_driven", "unknown"],
+    "benchmark_notes": "Open Loyalty Benchmark 2027 scores AI readiness as one of seven dimensions; 53.6% define success via retention/CLV."
+  },
+  {
+    "id": "co_branded_cards",
+    "name": "Co-branded Credit Cards",
+    "category": "co_branded_partnerships",
+    "description": "Co-branded card programs attached to the loyalty currency.",
+    "data_type": "array_of_object",
+    "benchmark_notes": "Record issuer, earn rate, annual fee, and elite-qualifying benefits; e.g., PC World Elite Mastercard earns 30 pts/$ at Loblaw affiliates."
+  },
+  {
+    "id": "alliance_membership",
+    "name": "Alliance / Coalition Membership",
+    "category": "co_branded_partnerships",
+    "description": "Airline alliance, hotel alliance, or coalition membership.",
+    "data_type": "string",
+    "benchmark_notes": "Alliances: Star Alliance, oneworld, SkyTeam; coalitions: PAYBACK, Air Miles, Scene+; hotel: GHA Discovery."
+  },
+  {
+    "id": "cross_industry_partners",
+    "name": "Cross-Industry Partnerships",
+    "category": "co_branded_partnerships",
+    "description": "Named partners outside the core sector (retail, fuel, streaming, dining).",
+    "data_type": "array_of_string",
+    "benchmark_notes": "Examples: Amazon Prime fuel discount at 7,500+ BP/Amoco/ampm; Walmart+ fuel at ExxonMobil/Murphy USA + Paramount+/Peacock + Burger King Royal Perks link."
+  },
+  {
+    "id": "transfer_in_partners",
+    "name": "Transfer-In Partners",
+    "category": "co_branded_partnerships",
+    "description": "Programs whose currency can be converted into this program's currency.",
+    "data_type": "array_of_string",
+    "benchmark_notes": "Distinct from transfer-out; e.g., Barclaycard Avios sweeps monthly into The British Airways Club."
+  },
+  {
+    "id": "lounge_access",
+    "name": "Lounge Access Benefit",
+    "category": "elite_perks",
+    "description": "Lounge access by tier (own lounges, partner networks, guest allowances).",
+    "data_type": "string",
+    "benchmark_notes": "Core airline/hotel elite differentiator; record guest limits and third-party lounge programs (e.g., Priority Pass attach)."
+  },
+  {
+    "id": "upgrade_policy",
+    "name": "Upgrade Policy",
+    "category": "elite_perks",
+    "description": "Complimentary or prioritized upgrades (cabin/room) by tier.",
+    "data_type": "string",
+    "benchmark_notes": "Record eligibility, confirmation windows, complimentary vs miles-based, and clear vs waitlist."
+  },
+  {
+    "id": "priority_services",
+    "name": "Priority Boarding / Check-in / Security",
+    "category": "elite_perks",
+    "description": "Priority processing benefits by tier.",
+    "data_type": "string",
+    "benchmark_notes": "Star Alliance Silver/Gold include priority boarding and upgrades as alliance-level incentives."
+  },
+  {
+    "id": "late_checkout",
+    "name": "Late Checkout / Guaranteed Availability",
+    "category": "elite_perks",
+    "description": "Late checkout, guaranteed room availability, and related hotel elite perks.",
+    "data_type": "string",
+    "benchmark_notes": "Record guaranteed 4pm checkout rights by tier and whether they are subject to availability."
+  },
+  {
+    "id": "dedicated_support",
+    "name": "Dedicated Support",
+    "category": "elite_perks",
+    "description": "Dedicated elite lines, ambassadors, or concierge.",
+    "data_type": "string",
+    "benchmark_notes": "Marriott Ambassador Elite: $23,000 + 100+ nights — top-tier service as a monetizable perk."
+  },
+  {
+    "id": "experiential_rewards",
+    "name": "Experiential / Event Rewards",
+    "category": "elite_perks",
+    "description": "Access to events, concerts, previews, and unique experiences.",
+    "data_type": "string",
+    "benchmark_notes": "ALL Accor Live Limitless positions experiences centrally; F1 membership (Aston Martin I/AM) is an experiential archetype."
+  },
+  {
+    "id": "ancillary_fee_waivers",
+    "name": "Fee Waivers and Service Perks",
+    "category": "elite_perks",
+    "description": "Baggage fee waivers, free award changes, breakfast, wifi, etc.",
+    "data_type": "array_of_string",
+    "benchmark_notes": "Bundle all cost-avoidance benefits; material to perceived value at mid tiers."
+  },
+  {
+    "id": "revenue_model",
+    "name": "Revenue Model",
+    "category": "program_economics",
+    "description": "How the program makes money.",
+    "data_type": "array_of_enum",
+    "allowed_values": ["breakage", "interchange_and_card_fees", "partner_revenue_share", "media_and_advertising", "membership_fees", "points_sale_to_partners", "co_brand_funding", "data_monetization", "sponsorship"],
+    "benchmark_notes": "Qantas Frequent Flyer reported A$625M underlying EBIT in FY2025–26 — loyalty as a standalone profit center."
+  },
+  {
+    "id": "membership_fee_structure",
+    "name": "Membership Fee Structure",
+    "category": "program_economics",
+    "description": "Free vs paid tiers, join fees, and subscription pricing.",
+    "data_type": "string",
+    "benchmark_notes": "Reference: Qantas join fee A$99.50; Costco Executive $130/yr (Sept 2024); Walmart+ $98/yr; ALL Accor+ paid cards (Jan 2026); Barclaycard Avios Plus £20/month."
+  },
+  {
+    "id": "profitability_disclosure",
+    "name": "Profitability Disclosure",
+    "category": "program_economics",
+    "description": "Whether program-level profit/EBIT is publicly disclosed.",
+    "data_type": "string",
+    "benchmark_notes": "Qantas discloses loyalty EBIT; airlines disclose loyalty revenue and liability in 10-Ks even without full P&L."
+  },
+  {
+    "id": "deferred_revenue_flow",
+    "name": "Deferred Revenue Flow",
+    "category": "program_economics",
+    "description": "Annual deferral of revenue on points issued versus recognition on redemption/breakage.",
+    "data_type": "object",
+    "benchmark_notes": "AAdvantage 2025: deferred $4.445B, recognized $3.935B; Delta 2024: $7.1B loyalty revenue recognized ($3.8B travel awards + $3.3B other)."
+  },
+  {
+    "id": "audit_risk_profile",
+    "name": "Audit Risk Profile",
+    "category": "program_economics",
+    "description": "Whether breakage/fair-value estimates are flagged as significant audit risks.",
+    "data_type": "string",
+    "benchmark_notes": "EY used an actuarial specialist to assess Delta's mileage breakage estimate — a benchmark for estimate complexity."
+  },
+  {
+    "id": "partner_economics",
+    "name": "Partner Revenue Sharing",
+    "category": "program_economics",
+    "description": "How points economics are shared with coalition and transfer partners.",
+    "data_type": "string",
+    "benchmark_notes": "Record currency sale price to partners, breakage sharing, and redemption settlement terms."
+  },
+  {
+    "id": "kpi_measurement_set",
+    "name": "KPI Measurement Set",
+    "category": "program_economics",
+    "description": "Metrics used to judge program success.",
+    "data_type": "array_of_enum",
+    "allowed_values": ["enrollment", "activation", "repeat_rate", "purchase_frequency", "average_order_value", "customer_lifetime_value", "redemption_rate", "retention", "member_nps", "revenue_uplift", "data_capture_rate"],
+    "benchmark_notes": "Umbrex KPI set: enrollment, activation, repeat rate, frequency, AOV, CLV, redemption, retention; 53.6% of surveyed firms use retention/CLV as the success definition."
+  },
+  {
+    "id": "program_maturity_level",
+    "name": "Program Maturity Level",
+    "category": "program_economics",
+    "description": "Maturity stage of the program against an industry model.",
+    "data_type": "enum",
+    "allowed_values": ["ad_hoc", "emerging", "established", "advanced", "best_in_class"],
+    "benchmark_notes": "Use a consistent maturity model (e.g., Umbrex 8-chapter playbook maturity model; Open Loyalty 7-dimension readiness score)."
+  },
+  {
+    "id": "regulatory_constraints",
+    "name": "Regulatory Constraints",
+    "category": "program_economics",
+    "description": "Legal/regulatory limits affecting program design.",
+    "data_type": "string",
+    "benchmark_notes": "Reference: Norway banned domestic airline loyalty programs in 2002 to promote competition and lifted the ban in 2013; accounting standards (IFRS 15/ASC 606) govern liability."
+  },
+  {
+    "id": "gamification_elements",
+    "name": "Gamification Elements",
+    "category": "earning_structure",
+    "description": "Games, streaks, badges, challenges, and non-transactional engagement mechanics.",
+    "data_type": "array_of_string",
+    "benchmark_notes": "Gamification is one of Open Loyalty's four primary frameworks; Club Canela awards 5 points per 5 minutes streamed (engagement earn)."
+  },
+  {
+    "id": "paid_membership_tier",
+    "name": "Paid Membership Layer",
+    "category": "program_economics",
+    "description": "Whether a paid membership/subscription layer sits on top of the free program.",
+    "data_type": "object",
+    "benchmark_notes": "Examples: Amazon Prime (~220M), Costco (81.4M paid memberships, Feb 2026), Walmart+, Disney+, Uber One, AMC A-List, ALL Accor+, Instacart+."
+  },
+  {
+    "id": "breakage_benefit_reversal",
+    "name": "Breakage Reversal Risk",
+    "category": "point_economics",
+    "description": "History of reversing previously recognized breakage when redemption expectations change.",
+    "data_type": "string",
+    "benchmark_notes": "Southwest reversed $116M of prior breakage revenue in Q4 2024 for pandemic-era flight credits expected to be redeemed."
+  }
+]

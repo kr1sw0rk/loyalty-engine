@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyalty Program Intelligence — digid</title>
+    <meta name="description" content="Benchmark and compare global loyalty programs across airlines, hotels, car rental, credit cards, retail, and more.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Loyalty Program Intelligence</h1>
+            <p class="subtitle">Benchmark & compare global loyalty programs across 9 sectors</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat">
+                <span class="stat-number" id="total-providers">-</span>
+                <span class="stat-label">Providers</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="total-parameters">-</span>
+                <span class="stat-label">Parameters</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="total-sectors">-</span>
+                <span class="stat-label">Sectors</span>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="providers">Providers</button>
+            <button class="tab" data-tab="parameters">Parameters</button>
+        </nav>
+
+        <!-- Providers Tab -->
+        <section id="providers-panel" class="tab-panel active">
+            <div class="controls">
+                <input type="search" id="search-providers" placeholder="Search providers..." class="search-input">
+                <select id="filter-sector" class="filter-select">
+                    <option value="">All Sectors</option>
+                </select>
+                <select id="filter-region" class="filter-select">
+                    <option value="">All Regions</option>
+                </select>
+            </div>
+            <div class="table-wrapper">
+                <table id="providers-table">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Program</th>
+                            <th>Sector</th>
+                            <th>Region</th>
+                            <th>Members</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="providers-tbody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <span id="providers-count">0 providers</span>
+            </div>
+        </section>
+
+        <!-- Parameters Tab -->
+        <section id="parameters-panel" class="tab-panel">
+            <div class="controls">
+                <input type="search" id="search-parameters" placeholder="Search parameters..." class="search-input">
+                <select id="filter-category" class="filter-select">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+            <div class="table-wrapper">
+                <table id="parameters-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="parameters-tbody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <span id="parameters-count">0 parameters</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 digid — Loyalty Program Intelligence POC</p>
+            <p>Data: <a href="https://github.com/kr1sw0rk/loyalty-engine" target="_blank" rel="noopener">kr1sw0rk/loyalty-engine</a></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

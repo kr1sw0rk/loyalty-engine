@@ -1,0 +1,1514 @@
+[
+  {
+    "company_name": "American Airlines",
+    "program_name": "AAdvantage",
+    "program_url": "https://www.aa.com",
+    "sector": "airline",
+    "estimated_members": 115000000,
+    "key_characteristics": "First major modern FFP (1981); spend and distance earning, 24-month inactivity expiration (since March 2022); loyalty liability $10.564B at YE2025; oneworld founding member.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Delta Air Lines",
+    "program_name": "SkyMiles",
+    "program_url": "https://www.delta.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "No mileage expiration since 2011; dynamic award pricing (+60% award cost 2015–2026); $8.8B loyalty deferred revenue at YE2024; SkyMiles valued $6.5B and pledged as collateral in 2020.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "United Airlines",
+    "program_name": "MileagePlus",
+    "program_url": "https://www.united.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Launched 1981; removed mileage expiration in 2019; dynamic pricing; Star Alliance founding member; co-brand Chase cards.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Southwest Airlines",
+    "program_name": "Rapid Rewards",
+    "program_url": "https://www.southwest.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Points with no blackout dates on award seats; reversed $116M of prior breakage revenue in Q4 2024 for pandemic-era flight credits.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "JetBlue Airways",
+    "program_name": "TrueBlue",
+    "program_url": "https://trueblue.jetblue.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Points-based (not distance-based) earning; no expiry while account active; bank partnership with Barclays.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Alaska Airlines",
+    "program_name": "Atmos Rewards",
+    "program_url": "https://www.alaskaair.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Rebranded from Mileage Plan; strong partner earn across oneworld and global airlines; oneworld member.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Air Canada",
+    "program_name": "Aeroplan",
+    "program_url": "https://www.aircanada.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance founding member; relaunched 2021 with fixed-ish partner award chart and extensive non-air earn (Apple, Sephora, Uber).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "WestJet",
+    "program_name": "WestJet Rewards",
+    "program_url": "https://www.westjet.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Tier-based earn (Teal to Platinum) with dollars-based earn currency.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Aeroméxico",
+    "program_name": "Club Premier",
+    "program_url": "https://www.aeromexico.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam member; points convertible to partners; major LATAM gateway program.",
+    "region": "latin_america"
+  },
+  {
+    "program_url": "https://www.avianca.com",
+    "company_name": "Avianca",
+    "program_name": "LifeMiles",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; LifeMiles sold as independent currency with frequent buy-miles promotions; no fuel surcharges on own awards.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "LATAM Airlines",
+    "program_name": "LATAM Pass",
+    "program_url": "https://www.latamairlines.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Largest South American carrier program; oneworld member; points with tier status (Gold/Diamond).",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "GOL Linhas Aéreas",
+    "program_name": "Smiles",
+    "program_url": "https://www.smiles.com.br",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Brazilian points program with airline and retail earn; dynamic award pricing.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Azul Brazilian Airlines",
+    "program_name": "TudoAzul",
+    "program_url": "https://www.joaazul.com.br",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Brazilian program with points on flights and Azul partners; multi-tier status.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Copa Airlines",
+    "program_name": "ConnectMiles",
+    "program_url": "https://www.copaair.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; Hub of the Americas program; miles with status tiers.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Aerolíneas Argentinas",
+    "program_name": "Aerolíneas Plus",
+    "program_url": "https://www.aerolineas.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam program for Argentina's flag carrier; miles and status levels.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "British Airways",
+    "program_name": "The British Airways Club",
+    "program_url": "https://www.britishairways.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Renamed from Executive Club on 1 April 2025; tier points now spend-based (£7,500 Silver / £20,000 Gold annually); Avios currency shared across IAG.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Lufthansa Group",
+    "program_name": "Miles & More",
+    "program_url": "https://www.miles-and-more.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Europe's largest FFP; Star Alliance founding member; status credits (HON, SEN, FTL) plus award miles; co-brand cards across DACH.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Air France-KLM",
+    "program_name": "Flying Blue",
+    "program_url": "https://www.flyingblue.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam shared program; Promo Rewards monthly awards; Explorer/free tier plus Elite tiers; transfer partners from all major card currencies.",
+    "region": "europe"
+  },
+  {
+    "company_name": "IAG (BA/Iberia/Aer Lingus)",
+    "program_name": "Avios",
+    "program_url": "https://www.avios.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Shared multi-airline currency across British Airways, Iberia, Aer Lingus, Qatar (historically); distance-based partner awards; UK/EU earning via Barclaycard and Virgin/BA co-brands.",
+    "region": "europe"
+  },
+  {
+    "company_name": "SAS",
+    "program_name": "EuroBonus",
+    "program_url": "https://www.sas.se",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Nordic program (founded 1991); EuroBonus points for flights and partners; moved to SkyTeam in 2024.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Turkish Airlines",
+    "program_name": "Miles&Smiles",
+    "program_url": "https://www.turkishairlines.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; Classic and Plus award levels; status via miles or qualifying flights; strong Middle East/Europe connectivity.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Virgin Atlantic",
+    "program_name": "Flying Club",
+    "program_url": "https://www.virginatlantic.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam member; Virgin Points currency; earn via Delta, ANA, and card partners; multi-tier status.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Emirates",
+    "program_name": "Skywards",
+    "program_url": "https://www.emirates.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Launched 2001; operates outside the three major alliances from Dubai; Skywards miles with Saver/Aware award types and tier status (Blue/Silver/Gold/Platinum).",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Qatar Airways",
+    "program_name": "Privilege Club",
+    "program_url": "https://www.qatarairways.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "oneworld member; Avios currency (aligned with BA/IAG ecosystem); tier status via Qpoints; strong Africa–Asia connectivity.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Etihad Airways",
+    "program_name": "Etihad Guest",
+    "program_url": "https://www.etihad.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Independent program from Abu Dhabi; miles with tier status; family pooling and partner airline earn.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Saudia",
+    "program_name": "Alfursan",
+    "program_url": "https://www.saudia.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Saudi flag carrier program; SkyTeam member; miles and elite tiers serving Middle East–Asia–Europe flows.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Ethiopian Airlines",
+    "program_name": "ShebaMiles",
+    "program_url": "https://www.ethiopianairlines.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; Africa's largest network program; miles and status tiers.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Kenya Airways",
+    "program_name": "Asante Rewards",
+    "program_url": "https://www.kenya-airways.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam program serving East Africa; miles earn on KQ and partners.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "South African Airways",
+    "program_name": "Voyager",
+    "program_url": "https://www.flysaa.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance program for South Africa; Voyager miles with tier status.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Singapore Airlines",
+    "program_name": "KrisFlyer",
+    "program_url": "https://www.singaporeair.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; KrisPay miles wallet bridge; high-value premium awards; Scoot integration.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Cathay Pacific",
+    "program_name": "Asia Miles / Cathay",
+    "program_url": "https://www.cathaypacific.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "oneworld member; miles expire after 18 months of inactivity (actuary-disclosed breakage model); oneworld tier status; banking and retail earn partners across Asia.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Korean Air",
+    "program_name": "SKYPASS",
+    "program_url": "https://www.koreanair.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam member; SKYPASS miles with status; joint venture with Delta across trans-Pacific.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "ANA (All Nippon Airways)",
+    "program_name": "ANA Mileage Club",
+    "program_url": "https://www.ana.co.jp",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance founding member; distance-based earning with premium cabin bonuses; highly regarded award chart.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Japan Airlines",
+    "program_name": "JAL Mileage Bank",
+    "program_url": "https://www.jal.co.jp",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "oneworld member; distance-based miles with JAL Card partners; domestic and international award charts.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Qantas Airways",
+    "program_name": "Qantas Frequent Flyer",
+    "program_url": "https://www.qantas.com",
+    "sector": "airline",
+    "estimated_members": 18900000,
+    "key_characteristics": "18.9M members (June 2026); status-credit tiers Bronze/Silver(300)/Gold(700)/Platinum(1400)/Platinum One(3600); A$99.50 join fee; loyalty unit reported A$625M underlying EBIT in FY2025–26; oneworld.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Virgin Australia",
+    "program_name": "Velocity Frequent Flyer",
+    "program_url": "https://www.velocityfrequentflyer.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Australia's #2 program; status tiers with status credits; partner earn with banks and retail; oneworld connect.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Air China",
+    "program_name": "PhoenixMiles",
+    "program_url": "https://www.airchina.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance member; Chinese flag carrier miles with status; integration with CN banking partners.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "China Eastern Airlines",
+    "program_name": "Eastern Miles",
+    "program_url": "https://www.ceair.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "SkyTeam member; miles with tier status; major China domestic and regional program.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Thai Airways",
+    "program_name": "Royal Orchid Plus",
+    "program_url": "https://www.thaiairways.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "Star Alliance founding member; miles and status tiers; strong Europe–Asia connectivity.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Air India",
+    "program_name": "Flying Returns",
+    "program_url": "https://www.airindia.com",
+    "sector": "airline",
+    "estimated_members": null,
+    "key_characteristics": "India's oldest FFP (relaunched under Tata); Star Alliance member; miles and tier status.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Marriott International",
+    "program_name": "Marriott Bonvoy",
+    "program_url": "https://www.marriott.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Formed Feb 2019 merging Marriott Rewards, Ritz-Carlton Rewards, Starwood Preferred Guest; five elite tiers (10/25/50/75/100 nights; Ambassador +$23,000 spend); $7.519B loyalty liability YE2024; members booked 72% of US room nights in 2024.",
+    "region": "global"
+  },
+  {
+    "company_name": "Hilton Worldwide",
+    "program_name": "Hilton Honors",
+    "program_url": "https://stories.hilton.com/hilton-honors-fact-sheet",
+    "sector": "hotel",
+    "estimated_members": 270000000,
+    "key_characteristics": "270M+ members worldwide (official fact sheet, Oct 2026); four status levels (Member/Silver/Gold/Diamond); award costs +55% 2015–2026; Points & Money hybrid redemption; launched 1987 as Hilton HHonors.",
+    "region": "global"
+  },
+  {
+    "company_name": "IHG Hotels & Resorts",
+    "program_name": "IHG One Rewards",
+    "program_url": "https://www.ihg.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Multi-brand program (InterContinental, Holiday Inn, etc.); milestone rewards alongside night-based elite tiers; co-brand cards with Barclays.",
+    "region": "global"
+  },
+  {
+    "company_name": "Hyatt Hotels Corporation",
+    "program_name": "World of Hyatt",
+    "program_url": "https://www.hyatt.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Small-but-elite member base; night-based tiers (Discoverist/Explorist/Globalist); high redemption value; milestone suite upgrades and brand explorations.",
+    "region": "global"
+  },
+  {
+    "company_name": "Wyndham Hotels & Resorts",
+    "program_name": "Wyndham Rewards",
+    "program_url": "https://www.wyndhamhotels.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Value positioning with flat-ish award pricing (from 7,500 points/night historically); broad economy/midscale footprint; Caesars partnership.",
+    "region": "global"
+  },
+  {
+    "company_name": "Choice Hotels",
+    "program_name": "Choice Privileges",
+    "program_url": "https://www.choicehotels.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Economy/midscale focused; points with elite tiers; strong conversion partnerships and co-brand cards.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Accor",
+    "program_name": "ALL (Accor Live Limitless)",
+    "program_url": "https://all.accor.com",
+    "sector": "hotel",
+    "estimated_members": 100000000,
+    "key_characteristics": "Rebranded from Le Club Dec 2019; 100M members in 2025; status tiers (Silver/Platinum etc.) plus paid ALL Accor+ membership cards added Jan 2026 for regular/business travelers.",
+    "region": "global"
+  },
+  {
+    "company_name": "Best Western Hotels",
+    "program_name": "Best Western Rewards",
+    "program_url": "https://www.bestwestern.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Points with no blackout on Best Western stays; elite tiers; loyalty across independent-style properties.",
+    "region": "global"
+  },
+  {
+    "company_name": "Radisson Hotel Group",
+    "program_name": "Radisson Rewards",
+    "program_url": "https://www.radissonhotels.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Replaced Club Carlson in most markets; points and status tiers across Radisson, Park Inn, artotel brands.",
+    "region": "global"
+  },
+  {
+    "company_name": "Global Hotel Alliance",
+    "program_name": "GHA Discovery",
+    "program_url": "https://www.gha.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Coalition of independent hotel brands (Anantara, Kempinski, Pan Pacific, etc.); tiered Discovery membership with local benefits rather than points-first model.",
+    "region": "global"
+  },
+  {
+    "company_name": "Preferred Hotels & Resorts",
+    "program_name": "I Prefer Hotel Rewards",
+    "program_url": "https://www.preferredhotels.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Independent-hotel coalition; points on paid stays plus instant benefits at enrollment; broad global coverage.",
+    "region": "global"
+  },
+  {
+    "company_name": "The Leading Hotels of the World",
+    "program_name": "Leaders Club",
+    "program_url": "https://www.lhw.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Luxury independent coalition; tiered membership (Classic to Leading) with points and experience benefits.",
+    "region": "global"
+  },
+  {
+    "company_name": "Four Seasons Hotels",
+    "program_name": "Four Seasons Preferred Partner",
+    "program_url": "https://www.fourseasons.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Deliberately eschews a traditional points program; agency/preferred-partner benefit model (breakfast, credits, upgrades) instead of a mass FFP.",
+    "region": "global"
+  },
+  {
+    "company_name": "Sonesta International Hotels",
+    "program_name": "Sonesta Travel Pass",
+    "program_url": "https://www.sonesta.com",
+    "sector": "hotel",
+    "estimated_members": null,
+    "key_characteristics": "Points and free-night rewards across Sonesta brands; simple earn-burn; growing US footprint.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Hertz",
+    "program_name": "Hertz Gold Plus Rewards",
+    "program_url": "https://www.hertz.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Points on rentals redeemable for free days; Hertz Gold (now integrated tiers) for skip-the-counter service; ~12,000 locations in 160 countries across Hertz, Dollar, Thrifty, Firefly; ~36% US market share.",
+    "region": "global"
+  },
+  {
+    "company_name": "Avis Budget Group",
+    "program_name": "Avis Preferred",
+    "program_url": "https://www.avis.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Points-based car rental rewards with tier levels (Preferred, Prestige, Elite); global airport footprint; co-brand and coalition earn.",
+    "region": "global"
+  },
+  {
+    "company_name": "Enterprise Holdings",
+    "program_name": "National Emerald Club",
+    "program_url": "https://www.nationalcar.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Choose-your-own-car Emerald Aisle model; Elite tier with free upgrades; part of Enterprise Holdings alongside Enterprise Plus and Alamo.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Enterprise Holdings",
+    "program_name": "Enterprise Plus",
+    "program_url": "https://www.enterprise.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Points on rentals for free rental days; Silver/Gold/Platinum tiers; leisure and local rental focus.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Enterprise Holdings",
+    "program_name": "Alamo Rewards",
+    "program_url": "https://www.alamo.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Value airport brand; tiered rewards with free rental days; self-service kiosk model.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Avis Budget Group",
+    "program_name": "Budget Fastbreak",
+    "program_url": "https://www.budget.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "Speed-focused loyalty for Budget; points and tier recognition across value brand rentals.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Europcar Mobility Group",
+    "program_name": "Europcar Rewards",
+    "program_url": "https://www.europcar.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "European car rental loyalty with points on rentals and partner earn; multi-country coverage under Europcar, InterRent, Green Motion.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Sixt",
+    "program_name": "Sixt One / Sixt+",
+    "program_url": "https://www.sixt.com",
+    "sector": "car_rental",
+    "estimated_members": null,
+    "key_characteristics": "German premium mobility group; loyalty status plus Sixt+ car subscription layer blending rental and subscription economics.",
+    "region": "europe"
+  },
+  {
+    "company_name": "American Express",
+    "program_name": "Membership Rewards",
+    "program_url": "https://www.americanexpress.com/en-us/benefits/rewards/membership-rewards/",
+    "sector": "credit_card",
+    "estimated_members": 141200000,
+    "key_characteristics": "141.2M cards in force worldwide (Dec 2023, FY2023 10-K); transfer points only to participating airline programs plus Pay with Points/gift cards; card tiers Green/Gold/Platinum/Centurion; also owns PAYBACK coalition.",
+    "region": "global"
+  },
+  {
+    "company_name": "JPMorgan Chase",
+    "program_name": "Chase Ultimate Rewards",
+    "program_url": "https://www.chase.com/personal/credit-cards/ultimate-rewards",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Travel, cash back, 200+ gift-card brands, transfers to airline/hotel partners on select cards; Shop and Earn earns 1–15 pts/$ at 1,000+ stores.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Citi",
+    "program_name": "Citi ThankYou Rewards",
+    "program_url": "https://www.citi.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Points redeemable for travel, gift cards, and transfers to airline partners (varies by card tier); strata card family repositioned 2024–2025.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Capital One",
+    "program_name": "Capital One Miles",
+    "program_url": "https://www.capitalone.com/credit-cards/travel-and-miles/",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Miles on every purchase across Venture/VentureOne family; transfer partners plus Portal booking; Capital One Lounge network as card perk.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Discover Financial",
+    "program_name": "Discover Cashback",
+    "program_url": "https://www.discover.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Cash-back model with Cashback Match first-year doubling; rotating 5% categories; no traditional transfer-partner currency.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Bilt Rewards",
+    "program_name": "Bilt Rewards",
+    "program_url": "https://www.biltrewards.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "8M+ homes in network, 50K+ local partners; points on rent/mortgage; transfers to ~19 airline programs and 7 hotel groups; Bilt Rent Day monthly promos; neighborhood dining earn.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Barclays UK",
+    "program_name": "Barclaycard Avios",
+    "program_url": "https://www.barclaycard.co.uk/personal/avios",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Free card 1 Avios/£1 (5,000 welcome on £1,000/3mo); Avios Plus £20/mo earns 1.5/£1 (25,000 welcome on £3,000); Avios swept monthly into The British Airways Club.",
+    "region": "europe"
+  },
+  {
+    "company_name": "HSBC UK",
+    "program_name": "HSBC Rewards",
+    "program_url": "https://www.hsbc.co.uk/rewards/",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "1 point per £5 anywhere Mastercard is accepted (up to 50 points per £5 at selected retailers); 2,500-point welcome; redeem anywhere Mastercard is accepted via Pay with Rewards.",
+    "region": "europe"
+  },
+  {
+    "company_name": "DBS Bank",
+    "program_name": "DBS Points / POSB Daily$",
+    "program_url": "https://www.dbs.com.sg/personal/cards/rewards/card-rewards",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Singapore's largest bank reward currency; redeem via DBS PayLah! for bill offsets, vouchers, Apple products, and Flexi eVouchers at all NETS QR acceptance points.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Wells Fargo",
+    "program_name": "Wells Fargo Rewards",
+    "program_url": "https://www.wellsfargo.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Points and cash-back cards with redemption for travel, gift cards, and statement credits; Autograph/Attitude card families.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "U.S. Bank",
+    "program_name": "U.S. Bank Altitude Rewards",
+    "program_url": "https://www.usbank.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Altitude points family redeemable for travel and cash back; real-time rewards redemption at select merchants.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Bank of America",
+    "program_name": "Preferred Rewards",
+    "program_url": "https://www.bankofamerica.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Relationship-tier benefits program (Gold/Platinum/Platinum Honors/Diamond/Honors Diamond) boosting card earn rates and fee waivers by combined balances.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Nu Holdings (Nubank)",
+    "program_name": "Nubank Rewards / Nu",
+    "program_url": "https://nubank.com.br",
+    "sector": "credit_card",
+    "estimated_members": 143000000,
+    "key_characteristics": "Parent serves 143M customers globally — largest digital bank in Latin America; cashback-style rewards on card spend across Brazil, Mexico, Colombia and the US.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Mercado Libre",
+    "program_name": "Mercado Puntos",
+    "program_url": "https://www.mercadolibre.com",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "Marketplace + Mercado Pago payments points; earn across marketplace, payments, and credit products; level-based VIP status in LATAM.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Tesco",
+    "program_name": "Tesco Clubcard",
+    "program_url": "https://www.tesco.com",
+    "sector": "retail",
+    "estimated_members": 20000000,
+    "key_characteristics": "UK's dominant grocery scheme (launched 13 Feb 1995; 20M+ users as of 2021); operates in UK, Ireland, Czech Republic, Slovakia, Hungary; Clubcard Prices member discounting; vouchers convert to partner rewards.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Sainsbury's",
+    "program_name": "Nectar",
+    "program_url": "https://www.nectar.com",
+    "sector": "retail",
+    "estimated_members": 16800000,
+    "key_characteristics": "Largest UK multi-partner scheme (16.8M members by 2010 claim; 14 member companies, 400+ online retailers); Amex co-brand card; Avios conversion with British Airways; Nectar360 fuel offers with Esso.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Marks & Spencer",
+    "program_name": "Sparks",
+    "program_url": "https://www.marksandspencer.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "UK retail membership with personalized offers, early access, and charity-donation earn; no classic fixed earn rate — offer-led model.",
+    "region": "europe"
+  },
+  {
+    "company_name": "IKEA",
+    "program_name": "IKEA Family",
+    "program_url": "https://www.ikea.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Global free membership with member prices, workshops, and product services; loyalty via discounts and experiences rather than points in most markets.",
+    "region": "global"
+  },
+  {
+    "company_name": "Walmart",
+    "program_name": "Walmart+",
+    "program_url": "https://www.walmartplus.com",
+    "sector": "retail",
+    "estimated_members": 20000000,
+    "key_characteristics": "Paid membership ($98/yr or $12.95/mo); 10¢/gal fuel at Walmart, ExxonMobil, Murphy USA; Paramount+/Peacock streaming; Burger King Royal Perks link (Aug 2024); no official subscriber total — estimates 16–32M households (Morgan Stanley/Deutsche Bank).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Costco",
+    "program_name": "Costco Membership",
+    "program_url": "https://www.costco.com",
+    "sector": "retail",
+    "estimated_members": 81400000,
+    "key_characteristics": "81.4M paid memberships and 145.9M cardholders (Feb 2026); Gold Star/Business/Executive tiers; Executive fee $130 (Sept 2024); member-only gas stations and 924 warehouses worldwide (Nov 2025).",
+    "region": "global"
+  },
+  {
+    "company_name": "Target",
+    "program_name": "Target Circle",
+    "program_url": "https://www.target.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Free loyalty with personalized deals, earnings on purchases, and Circle Card (5%); evolved from points to offer-led cash savings model.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Kroger",
+    "program_name": "Kroger Rewards (Plus)",
+    "program_url": "https://www.kroger.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "US grocery loyalty with fuel points (100 points = $0.10/gal at Kroger fuel centers), digital coupons, and personalized offers; 84.51° data arm.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "CVS Health",
+    "program_name": "ExtraCare",
+    "program_url": "https://www.cvs.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "US drugstore loyalty with ExtraBucks rewards, personalized coupons, and ExtraCare card; one of the largest US retail loyalty bases.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Walgreens Boots Alliance",
+    "program_name": "myWalgreens",
+    "program_url": "https://www.walgreens.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "US pharmacy retail program replacing Balance Rewards; cash rewards on eligible purchases, member pricing, and prescription integration.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Sephora",
+    "program_name": "Beauty Insider",
+    "program_url": "https://www.sephora.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Three-tier structure: Insider (free), VIB ($350/yr), Rouge ($1,000/yr); points redeemable for beauty products; strong experiential and community perks at top tiers.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Ulta Beauty",
+    "program_name": "Ultamate Rewards",
+    "program_url": "https://www.ulta.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Member and Platinum/Diamond tiers; points on spend redeemable for dollars off; frequent double-point and birthday promotions.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Nike",
+    "program_name": "Nike Membership",
+    "program_url": "https://www.nike.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Global membership with member-only products, early access, free shipping and training content; product access rather than points-led.",
+    "region": "global"
+  },
+  {
+    "company_name": "Nordstrom",
+    "program_name": "The Nordy Club",
+    "program_url": "https://www.nordstrom.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Points-based department store program (1 pt/$) with Note-level tier benefits, alterations perks, and anniversary events.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Macy's",
+    "program_name": "Macy's Star Rewards",
+    "program_url": "https://www.macys.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Bronze/Silver/Gold/Platinum tiers by annual spend; points redeemable for Star Money; birthday bonus and tier shipping perks.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Kohl's",
+    "program_name": "Kohl's Rewards",
+    "program_url": "https://www.kohls.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Free loyalty earning Kohl's Cash and rewards on spend; frequent stacked promo calendar (percent-off events + Kohl's Cash).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Loblaw Companies",
+    "program_name": "PC Optimum",
+    "program_url": "https://www.pcoptimum.ca",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Launched 1 Feb 2018 merging PC Plus and Shoppers Optimum; 1,000 points = CA$1; PC World Elite Mastercard earns 30 pts/$ at Loblaw affiliates; covers grocery, pharmacy, fuel.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Canadian Tire",
+    "program_name": "Canadian Tire Money / Triangle",
+    "program_url": "https://www.canadiantire.ca",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Triangle Rewards digital conversion of classic Canadian Tire Money; earn across CT, Sport Chek, Mark's; bill-pay earn via Triangle Mastercard.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Scotiabank / Cineplex / Empire (JV)",
+    "program_name": "Scene+",
+    "program_url": "https://www.sceneplus.ca",
+    "sector": "retail",
+    "estimated_members": 10000000,
+    "key_characteristics": "10M+ users; joint venture ~33.3% each Scotiabank, Cineplex, Empire (Sobeys/Safeway); covers banking, grocery, cinema, and fuel in Canada.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Loyalty Ventures / Canadian loyalty",
+    "program_name": "Air Miles (Canada)",
+    "program_url": "https://www.airmiles.ca",
+    "sector": "retail",
+    "estimated_members": 10000000,
+    "key_characteristics": "10M+ users in Canada; classic coalition earn at grocery/fuel/retail; replaced by Blue Rewards in 2026 transition.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Rewards Management Middle East",
+    "program_name": "Air Miles Middle East",
+    "program_url": "https://www.airmilesme.com",
+    "sector": "retail",
+    "estimated_members": 1400000,
+    "key_characteristics": "Coalition program since 2001 across UAE, Qatar, Bahrain (1.4M+ members); earn at retail/fuel partners and redeem for travel and merchandise.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Air Miles Netherlands",
+    "program_name": "Air Miles Netherlands",
+    "program_url": "https://www.airmiles.nl",
+    "sector": "retail",
+    "estimated_members": 3800000,
+    "key_characteristics": "3.8M active members — the largest loyalty program in the Netherlands; coalition earn at Shell, AH, and partners.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Coles Group / Wesfarmers",
+    "program_name": "flybuys",
+    "program_url": "https://www.flybuys.com.au",
+    "sector": "retail",
+    "estimated_members": 9000000,
+    "key_characteristics": "Australia's largest grocery coalition (~9M members); 50/50 Coles–Wesfarmers via Loyalty Pacific; 2,000 points = A$10 store credit; cross-earn at Target, Kmart, BP, airlines.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Woolworths Group",
+    "program_name": "Everyday Rewards",
+    "program_url": "https://www.everydayrewards.com.au",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Australian grocery loyalty: Everyday Rewards dollars at Woolworths supermarkets, BWS, Big W; fuel discount vouchers via participating Caltex/EG outlets; linked to Qantas Frequent Flyer earn.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "PAYBACK (American Express Group)",
+    "program_name": "PAYBACK",
+    "program_url": "https://www.payback.de",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Germany's largest bonus program (self-described): 30+ in-store partners across 22,000+ German stores and ~700 online shops; redeem from 200 points for vouchers, prizes, donations or Miles&More; founded 2000; operates DE/IT/PL/AT; owned via Loyalty Partner GmbH within American Express Group.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Lidl",
+    "program_name": "Lidl Plus",
+    "program_url": "https://www.lidl.de/lidl-plus",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Digital customer-card app: weekly coupons, Scan&Go, digital receipts, and Lidl Punkte currency redeemable against entertainment subscriptions (Disney+, BILD+, Dyn); awarded 'Beste App – Höchster Mehrwert 2026' (SZ Institut/ServiceValue).",
+    "region": "europe"
+  },
+  {
+    "company_name": "Trumf (NorgesGruppen etc.)",
+    "program_name": "Trumf",
+    "program_url": "https://www.trumf.no",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Norwegian coalition: points at NorgesGruppen groceries, Shell, and partners; convertible to EuroBonus and other airline miles.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Boots UK (Walgreens Boots Alliance)",
+    "program_name": "Boots Advantage Card",
+    "program_url": "https://www.boots.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "UK pharmacy/beauty loyalty: 4 Advantage points per £1 (classic rate), redeemable in-store; birthday and member-price perks.",
+    "region": "europe"
+  },
+  {
+    "company_name": "H&M",
+    "program_name": "H&M Member",
+    "program_url": "https://www.hm.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Global fashion membership: points per spend, member-only prices, conscious discounts and early access; tierless free program.",
+    "region": "global"
+  },
+  {
+    "company_name": "A.S. Watson Group",
+    "program_name": "MoneyBack",
+    "program_url": "https://www.moneyback.com.hk",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Hong Kong cross-chain scheme shared across ParknShop, Watsons, Fortress under common ownership; points and vouchers.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "NTUC FairPrice (Singapore)",
+    "program_name": "Plus! (FairPrice)",
+    "program_url": "https://www.fairprice.com.sg",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Singapore grocery coalition (with Plus! partners); earn on FairPrice spend and redeem via app; linked to bank card earn.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Octopus Cards (Hong Kong)",
+    "program_name": "Octopus Rewards",
+    "program_url": "https://www.octopus.com.hk",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Transport-payment-embedded loyalty: points on Octopus stored-value spend across retail partners in Hong Kong.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Rakuten Group",
+    "program_name": "Rakuten Points (Super Point)",
+    "program_url": "https://points.rakuten.co.jp",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Japan's largest e-commerce point ecosystem: Rakuten Super Point launched Nov 2002; Rakuten Card held by 13M+ (Nov 2016); earn across Ichiba, Travel, mobile and financial services.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Rakuten (US)",
+    "program_name": "Rakuten Rewards",
+    "program_url": "https://www.rakuten.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "US cashback coalition: 3,500+ stores; Big Check cashback payouts; shopping portal and app model.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Shoprite Group",
+    "program_name": "Shoprite Xtra Savings",
+    "program_url": "https://www.shoprite.co.za",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "South Africa's largest grocery loyalty (part of 23+ major SA programs in 2026 research); member pricing, savings and data-driven offers.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Pick n Pay",
+    "program_name": "Smart Shopper",
+    "program_url": "https://www.pnp.co.za",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "South African coalition-style program: points at Pick n Pay and partners, personalized deals, and partner conversions.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Discovery (South Africa)",
+    "program_name": "Discovery Vitality",
+    "program_url": "https://www.discovery.co.za",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Behavior-linked health/insurance loyalty: Vitality points via healthy behaviors, gym, and shopping partners; tiered status (Bronze to Diamond) with global licensing (Vitality in UK, US, etc.).",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "First National Bank (FirstRand)",
+    "program_name": "FNB eBucks",
+    "program_url": "https://www.fnb.co.za",
+    "sector": "credit_card",
+    "estimated_members": null,
+    "key_characteristics": "South African bank rewards: eBucks earned on card/fuel/retail spend and banking behaviors; redeemable at FNB partners including fuel and travel.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Dotz (Brazil)",
+    "program_name": "Dotz",
+    "program_url": "https://www.dotz.com.br",
+    "sector": "retail",
+    "estimated_members": 50000000,
+    "key_characteristics": "Brazilian coalition with 50M+ members; earn at supermarkets, fuel, telecom and retail partners; convert to airline miles and vouchers.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Falabella (Chile)",
+    "program_name": "Fpuntos",
+    "program_url": "https://www.fpuntos.cl",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Chilean retail conglomerate loyalty (Falabella, Sodimac, Tottus); separate from CMR Puntos card program; active loyalty-rebrand flag on falabella.com.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Cencosud",
+    "program_name": "Cencosud Points",
+    "program_url": "https://www.cencosud.com",
+    "sector": "retail",
+    "estimated_members": null,
+    "key_characteristics": "Andean/LATAM hypermarket and department store loyalty across Chile, Argentina, Peru, Colombia; card-linked points (Tarjeta Cencosud) and store redeem.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Starbucks",
+    "program_name": "Starbucks Rewards",
+    "program_url": "https://www.starbucks.com/rewards",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Star-led currency (Gold tier redesigned March 2026 at 500 Stars ≈ $500 spend); app-first order/pay/earn across 40,990 stores in 87 countries (2025); core digital engagement engine.",
+    "region": "global"
+  },
+  {
+    "company_name": "McDonald's Corporation",
+    "program_name": "MyMcDonald's Rewards",
+    "program_url": "https://www.mcdonalds.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "App-based points (100 points per $1, redeem from 1,500) rolled out market-by-market; 45,356 restaurants in 100+ countries (end-2025) give global footprint even where program names differ.",
+    "region": "global"
+  },
+  {
+    "company_name": "Chick-fil-A",
+    "program_name": "Chick-fil-A One",
+    "program_url": "https://www.chick-fil-a.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Tiered membership (Silver/Red/Platinum) based on eligibility; earn on purchases via app; 3,488 restaurants (US 48 states + DC + PR; Canada, UK, Singapore).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Domino's Pizza",
+    "program_name": "Domino's Rewards",
+    "program_url": "https://www.dominos.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Points-per-order model (e.g., earn toward free pizza after qualifying spend); heavy promo cadence; digital-order integrated.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Pizza Hut",
+    "program_name": "Hut Rewards",
+    "program_url": "https://www.pizzahut.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Points on every dollar spent (no minimum); redeem for free pizza; Yum! Brands digital ecosystem.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Yum! Brands (KFC)",
+    "program_name": "KFC Rewards",
+    "program_url": "https://www.kfc.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Gamified instant-win rewards on app orders (prizes, food, points); market-dependent rollout across US and international KFC markets.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Taco Bell",
+    "program_name": "Taco Bell Rewards",
+    "program_url": "https://www.tacobell.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "App loyalty earning points on purchases, birthday rewards, and member-only drops; Yum! Brands digital stack.",
+    "region": "north_america"
+  },
+  {
+    "program_url": "https://www.bk.com",
+    "company_name": "Burger King",
+    "program_name": "Royal Perks",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Earn BK Crown Points on digital orders; redeem for food; cross-linked with Walmart+ (daily 25% online discount + quarterly Whopper, Aug 2024).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Dunkin' (Inspire Brands)",
+    "program_name": "Dunkin' Rewards",
+    "program_url": "https://www.dunkindonuts.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Points-based (replaced DD Perks); earn on every order with boosted-status rewards tiers; app-first US coffee program.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Tim Hortons",
+    "program_name": "Tim Hortons Rewards",
+    "program_url": "https://www.timhortons.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Points on purchases redeemable for free food/drinks; Roll Up to Win integration seasonally; Canada-dominant QSR program.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Chipotle Mexican Grill",
+    "program_name": "Chipotle Rewards",
+    "program_url": "https://www.chipotle.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Earn points per dollar via app; redeem for free entrées; surprise free-food drops and gamified streaks.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Panera Bread",
+    "program_name": "MyPanera / Panera Rewards",
+    "program_url": "https://www.panerabread.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "One of the first US QSR app-based programs (MyPanera); evolved to points rewards plus unlimited sip club subscription layer.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Costa Coffee (Coca-Cola)",
+    "program_name": "Costa Club",
+    "program_url": "https://www.costa.co.uk",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "UK coffee chain: collect a stamp/bean per qualifying drink (app-based); free drink milestones; Coca-Cola-owned international rollout.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Pret A Manger",
+    "program_name": "Pret Perks / Club Pret",
+    "program_url": "https://www.pret.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Subscription coffee club (Club Pret) layered on app perks — UK coffee-shop subscription loyalty model.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Jollibee Foods Corporation",
+    "program_name": "Jollibee Rewards / Joy app",
+    "program_url": "https://www.jollibee.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "Philippines-dominant QSR app loyalty with points, vouchers, and delivery integration across Jollibee, Chowking, Greenwich brands.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Luckin Coffee",
+    "program_name": "Luckin Coffee App Rewards",
+    "program_url": "https://www.luckincoffee.com",
+    "sector": "dining",
+    "estimated_members": null,
+    "key_characteristics": "China's app-native coffee chain: coupons, first-order discounts and membership pricing embedded in mobile ordering rather than classic points.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Rappi",
+    "program_name": "RappiPrime",
+    "program_url": "https://www.rappi.com",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "LATAM delivery subscription (free delivery, priority, partner perks) — paid-membership model across food, grocery and courier in 9 countries.",
+    "region": "latin_america"
+  },
+  {
+    "company_name": "Shell",
+    "program_name": "Shell Go+ / Shell Rewards",
+    "program_url": "https://www.shell.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "Fuel and convenience loyalty across markets (Go+ in UK/EU: per-litre fuel savings and in-store offers; Shell Rewards in US/other); V-Power premium tier backbone worldwide since 2001.",
+    "region": "global"
+  },
+  {
+    "company_name": "BP",
+    "program_name": "BPme Rewards",
+    "program_url": "https://www.bp.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "US fuel-retail app program: earn cents-per-gallon discounts and in-store rewards at BP/Amoco stations; BP/Amoco/ampm also anchors Amazon Prime fuel discount (7,500+ stations, 10¢/gal).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "ExxonMobil",
+    "program_name": "ExxonMobil Rewards+",
+    "program_url": "https://www.exxon.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "App-based fuel rewards: points per gallon at Exxon and Mobil stations; Walmart+ members get 10¢/gal at ExxonMobil stations.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Circle K (Couche-Tard)",
+    "program_name": "Circle K Rewards",
+    "program_url": "https://www.circlek.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "Convenience retail app loyalty with fuel and in-store offers across North America and Europe under Alimentation Couche-Tard.",
+    "region": "global"
+  },
+  {
+    "company_name": "Chevron / Texaco",
+    "program_name": "Chevron Rewards",
+    "program_url": "https://www.chevronwithtechron.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "US fuel loyalty app: earn rewards on fuel and car wash purchases at Chevron and Texaco stations.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Marathon Petroleum (Speedway)",
+    "program_name": "Speedy Rewards",
+    "program_url": "https://www.speedway.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "US convenience/fuel points program (Speedway brand under Marathon/7-Eleven transition): fuel discounts, in-store earn, and redeem for rewards.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Petro-Canada (Suncor)",
+    "program_name": "Petro-Points",
+    "program_url": "https://www.petro-canada.ca",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "Canadian fuel/convenience coalition: points redeemable for free fuel and in-store; partners with Aeroplan and other schemes.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Esso (Imperial Oil / ExxonMobil networks)",
+    "program_name": "Esso Extra / Esso Rewards",
+    "program_url": "https://www.esso.ca",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "Canadian Esso loyalty (Esso Extra, migrating to Esso Rewards): points on fuel with Aeroplan partner earn; UK Esso/Exxon networks tie into Tesco Clubcard fuel offers via Nectar360.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Casey's General Stores",
+    "program_name": "Casey's Rewards",
+    "program_url": "https://www.caseys.com",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "US Midwest convenience/fuel chain: points on fuel, in-store and pizza orders redeemable for discounts and donations.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "ADNOC Distribution",
+    "program_name": "ADNOC Rewards",
+    "program_url": "https://www.adnoc.ae",
+    "sector": "fuel",
+    "estimated_members": null,
+    "key_characteristics": "UAE fuel and convenience loyalty: points on fuel and store spend, redeemable at ADNOC stations and partners — leading Gulf fuel-retail program.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Amazon",
+    "program_name": "Amazon Prime",
+    "program_url": "https://www.amazon.com/prime",
+    "sector": "other",
+    "estimated_members": 220000000,
+    "key_characteristics": "Global paid membership ~220M users across 28 countries (mid-2025): shipping, Prime Video, deals; US fuel discount 10¢/gal at 7,500+ BP/Amoco/ampm (Oct 2024, expanded 2025); archetype of subscription loyalty bundling.",
+    "region": "global"
+  },
+  {
+    "company_name": "AMC Theatres",
+    "program_name": "AMC Stubs",
+    "program_url": "https://www.amctheatres.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Hybrid tiers: Insider (free) → Premiere → Premiere Go → A-List subscription (up to 4 movies/week); earn up to 100 pts/$ by tier; 5,000 points = $5 off; points don't expire at A-List.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Regal Cinemas (Cineworld)",
+    "program_name": "Regal Crown Club",
+    "program_url": "https://www.regmovies.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Points per dollar on tickets and concessions redeemable for free movies and snacks; tier upgrades for frequent moviegoers.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Caesars Entertainment",
+    "program_name": "Caesars Rewards",
+    "program_url": "https://www.caesars.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Casino-hospitality coalition: tier credit earned via gaming, hotel, dining; redeem across 50+ resorts; Diamond/Seven Stars elite tiers; Wyndham partnership linkage.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "MGM Resorts International",
+    "program_name": "MGM Rewards",
+    "program_url": "https://www.mgmresorts.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Casino resort program (rebranded from M life): tier credits via gaming and spend; redeem for freeplay, hotel, dining; Pearl-to-NOIR tiers with Hyatt linkage at base.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "The Walt Disney Company",
+    "program_name": "Disney+ Perks",
+    "program_url": "https://www.disneyplus.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Streaming-side perks program for Disney+ subscribers: merchandise discounts, park offers, and partner deals layered on subscription rather than points.",
+    "region": "global"
+  },
+  {
+    "company_name": "Universal Destinations & Experiences",
+    "program_name": "Universal Rewards Visa (co-brand)",
+    "program_url": "https://www.universalstudios.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Co-branded credit card earning Universal rewards for park and entertainment spend — theme-park loyalty fused with card economics.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Audience Rewards",
+    "program_name": "Audience Rewards (Broadway)",
+    "program_url": "https://www.audiencerewards.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Official Broadway loyalty: 2 ShowPoints per $1 on tickets; VIP tier at 10,000 points/year earns 3/$1 plus insider events.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "FIFA",
+    "program_name": "FIFA Rewards",
+    "program_url": "https://www.fifa.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Global football governing body's fan loyalty: earn and redeem around FIFA tournaments, merchandise and experiences.",
+    "region": "global"
+  },
+  {
+    "company_name": "Six Flags",
+    "program_name": "Pass Perks",
+    "program_url": "https://www.sixflags.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Season-pass holder perks: free guest visits, food/merch discounts and exclusive park events tied to pass tier.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Aston Martin Aramco F1 Team",
+    "program_name": "I / AM Membership",
+    "program_url": "https://www.astonmartinf1.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Experiential fan membership: tiered access to content, votes, and race experiences — sports-fan loyalty archetype.",
+    "region": "europe"
+  },
+  {
+    "company_name": "Canela Media",
+    "program_name": "Club Canela",
+    "program_url": "https://www.canela.tv",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "US Hispanic streaming engagement loyalty (Antavo-powered): 4 tiers; 5 points per 5 minutes streamed ('Five for Five'); points expire after 1 year; redeem for content, merch, partner offers (incl. McDonald's).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Microsoft",
+    "program_name": "Microsoft Rewards",
+    "program_url": "https://rewards.microsoft.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Global points for Bing searches, Game Pass and Microsoft Store spend; redeem for games, gift cards, sweeps — tech-ecosystem engagement loyalty.",
+    "region": "global"
+  },
+  {
+    "company_name": "Sony Interactive Entertainment",
+    "program_name": "PlayStation Stars",
+    "program_url": "https://www.playstation.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Console loyalty: points ('Points' currency) on purchases, campaign challenges, and digital collectibles; redeemable toward store credit.",
+    "region": "global"
+  },
+  {
+    "company_name": "Nintendo",
+    "program_name": "My Nintendo",
+    "program_url": "https://my.nintendo.com",
+    "sector": "entertainment",
+    "estimated_members": null,
+    "key_characteristics": "Gold/Platinum points on eShop and retail purchases redeemable for wallpapers, discounts and goods; tied to Switch ecosystem.",
+    "region": "global"
+  },
+  {
+    "company_name": "Uber",
+    "program_name": "Uber One",
+    "program_url": "https://www.uber.com/one",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Cross-vertical paid membership: delivery fee benefits, 6% back on rides, partner offers — subscription loyalty spanning mobility and food.",
+    "region": "global"
+  },
+  {
+    "company_name": "DoorDash",
+    "program_name": "DashPass",
+    "program_url": "https://www.doordash.com/dashpass",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Paid subscription (delivery fee savings + member pricing) layered with credit-card partnership benefits; food-delivery subscription loyalty.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Instacart",
+    "program_name": "Instacart+",
+    "program_url": "https://www.instacart.com",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Paid membership: free delivery on qualifying orders, reduced service fees, and partner perks (e.g., household brand offers) — grocery delivery subscription model.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "T-Mobile US",
+    "program_name": "T-Mobile Tuesdays",
+    "program_url": "https://www.t-mobile.com",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Weekly partner-perks drops for postpaid customers: QSR (Domino's, Burger King, etc.), fuel (Shell), entertainment (Fandango, StubHub) and ticketing; 14M+ gifts redeemed in first 3 months (2016).",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Safaricom",
+    "program_name": "Bonga Points",
+    "program_url": "https://www.safaricom.co.ke",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "Kenya's telco/M-Pesa earn-and-spend points: earn on airtime, M-Pesa and partner spend; redeem for airtime, goods and partner offers — emerging-market telco loyalty at scale.",
+    "region": "middle_efrica"
+  },
+  {
+    "company_name": "Grab Holdings",
+    "program_name": "GrabCoins (formerly GrabRewards)",
+    "program_url": "https://www.grab.com/sg/rewards/",
+    "sector": "other",
+    "estimated_members": null,
+    "key_characteristics": "SE Asia super-app currency renamed GrabCoins (1:1 carryover; SGD1 = 500 GrabCoins); miles transfer-in and offsets on GrabFood/GrabMart from 50 coins — regional coalition across mobility, food and payments.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Coles Group / Wesfarmers",
+    "program_name": "flybuys (fuel partners)",
+    "program_url": "https://www.flybuys.com.au",
+    "sector": "fuel",
+    "estimated_members": 9000000,
+    "key_characteristics": "Cross-listed fuel angle: flybuys earns at Australian fuel partners while Everyday Rewards offers fuel vouchers — grocery–fuel coalition earn is standard in the AU market.",
+    "region": "asia_pacific"
+  },
+  {
+    "company_name": "Scene LP (Scotiabank/Cineplex/Empire)",
+    "program_name": "Scene+ (Entertainment & Fuel)",
+    "program_url": "https://www.sceneplus.ca",
+    "sector": "entertainment",
+    "estimated_members": 10000000,
+    "key_characteristics": "Cross-listed: Cineplex cinema earn/burn plus grocery (Empire/Sobeys) and fuel partners — Canadian multi-sector coalition with 10M+ users.",
+    "region": "north_america"
+  },
+  {
+    "company_name": "Walmart",
+    "program_name": "Walmart+ Fuel (ExxonMobil/Murphy USA)",
+    "program_url": "https://www.walmartplus.com",
+    "sector": "fuel",
+    "estimated_members": 20000000,
+    "key_characteristics": "Cross-listed: Walmart+ members save 10¢/gal at Walmart, ExxonMobil and Murphy USA stations — retail membership monetized partly through fuel perks.",
+    "region": "north_america"
+  }
+]
