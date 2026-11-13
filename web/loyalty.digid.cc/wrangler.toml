@@ -1,10 +1,5 @@
-name = "loyalty-engine-api"
-main = "src/worker.js"
+name = "loyalty-digid"
 compatibility_date = "2026-11-13"
-
-routes = [
-    { pattern = "api.loyalty.digid.cc/*", zone_name = "digid.cc" }
-]
 
 [[d1_databases]]
 binding = "loyalty_engine"
